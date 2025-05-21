@@ -1,0 +1,23 @@
+[
+    {
+        "event" : "24th Philippine Computing Science Congress",
+        "place" : "La Salle, Laguna",
+        "date" : "May 2024",
+        "awards" : ["Attendee"],
+        "imageSrc" : "src/assets/competition/1.png"
+    },
+    {
+        "event" : "APPCON 2023",
+        "place" : "Nationwide (NU-Lipa)",
+        "date" : "October 2023 - April 2024",
+        "awards" : ["Participant", "Represented NU-Lipa", "Paper published (Data in Brief)"],
+        "imageSrc" : "src/assets/competition/2.jpg"
+    },
+    {
+        "event" : "CHED LAKAS AI Research Program",
+        "place" : "NU-Lipa",
+        "date" : "October 2023",
+        "awards" : ["Attendee", "Trained LLM"],
+        "imageSrc" : "src/assets/competition/3.png"
+    }
+]

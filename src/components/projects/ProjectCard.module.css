@@ -1,0 +1,87 @@
+@import url(../../vars.css);
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #576cbc 0%, #132a53 100%);
+  box-shadow: 0, 16px 14px 0 #04152d;
+  padding: 18px 24px;
+  margin: 0 5px;
+  max-width: 500px;
+}
+
+.container:hover {
+    box-shadow: 0 5px 14px 0 #576cbc;
+    transform: scale(1.01);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+  }
+
+.imageContainer {
+  position: relative;
+}
+
+.image {
+  margin-bottom: 26px;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 91%;
+  background: rgba(27, 33, 61, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.imageContainer:hover .overlay {
+  opacity: 1;
+}
+
+.icon {
+  margin: 0 50px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.icon img {
+  width: 80px;
+  height: 80px;
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.description {
+  margin-top: 6px;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.techStack {
+  width: 100%;
+  margin-top: 14px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+}
+
+.tech {
+  font-size: 25px;
+  font-weight: 400;
+  border-radius: 100px;
+  background: var(--color-dark);
+  padding: 2px 22px;
+}

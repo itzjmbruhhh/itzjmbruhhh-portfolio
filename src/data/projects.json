@@ -1,0 +1,32 @@
+[
+    {
+        "title" : "LAYA (Legal Aid at Your Access)",
+        "description" : "A Multilingual conversational AI for Philippine law, focused on data collection, NLP preprocessing, and model training for automated legal assistance.",
+        "image" : "src/assets/projects/1.png",
+        "tag" : ["All", "Web", "Mobile"],
+        "techStack" : ["Python", "Azure", "Pytorch"],
+        "links": [
+            {"url": "https://github.com/jeisquaredd/LAYA", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", "name": "GitHub"}
+        ]
+    },
+    {
+        "title" : "iPaws",
+        "description" : "A comprehensive pet tracker app that enables you to connect with fellow pet owners, locate the nearest veterinary services, and monitor your pet's daily activities and needs.",
+        "image" : "src/assets/projects/2.png",
+        "tag" : ["All", "Mobile"],
+        "techStack" : ["Android Studio", "Java"],
+        "links": [
+            {"url": "https://github.com/JMReyes1014/OOP-Finals-Project", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", "name": "GitHub"}
+        ]
+    },
+    {
+        "title" : "NPK Deficiency Detector in Bitter Gourd Leaves ",
+        "description" : "A Deep Learning CNN Model focused on distinguishing between Healthy, Nitrogen, Phosphorus and Potassium Deficient Bitter Gourd Plants.",
+        "image" : "src/assets/projects/3.png",
+        "tag" : ["All", "Web"],
+        "techStack" : ["Django", "React", "Tensorflow"],
+        "links": [
+            {"url": "https://github.com/JMReyes1014/NPK_Deficiency_Classifier", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", "name": "GitHub"}
+        ]
+    }
+]

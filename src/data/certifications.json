@@ -1,0 +1,10 @@
+[
+    {
+        "title": "IC3 Digital Literacy",
+        "imageSrc" : "src/assets/certification/IC3_Level1.png"
+    },
+    {
+        "title": "IT Specialist: Python",
+        "imageSrc" : "src/assets/certification/ITS_Python.png"
+    }
+]

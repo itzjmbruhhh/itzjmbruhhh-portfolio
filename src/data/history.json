@@ -1,0 +1,26 @@
+[
+    {
+        "level" : "College",
+        "school" : "National University Lipa",
+        "startYear" : "2022",
+        "endDate" : "Present",
+        "achievements" : ["GPA. 3.44 / 4.00", "Deans Lister, TOEIC Exam Score: 885", "iNUvators - Member"],
+        "imageSrc" : "src/assets/Education/NU.png"
+    },
+    {
+        "level" : "Senior High School",
+        "school" : "APEC Schools Lipa",
+        "startYear" : "2019",
+        "endDate" : "2021",
+        "achievements" : [" Science, Technology, Engineering and Mathematics", " Graduated with High Honors and Merit Award"],
+        "imageSrc" : "src/assets/Education/APEC.png"
+    },
+    {
+        "level" : "High School",
+        "school" : "Canossa Academy Lipa",
+        "startYear" : "2014",
+        "endDate" : "2018",
+        "achievements" : [" Graduated with Achievers", "Math Honors Society and Taekwondo Club - member"],
+        "imageSrc" : "src/assets/Education/CA.png"
+    }
+]
