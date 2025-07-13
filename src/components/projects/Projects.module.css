@@ -56,6 +56,32 @@
   font-size: 18px;
 }
 
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .pageButton {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0.25rem 0.75rem;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .pageButton[disabled] {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .pageIndicator {
+    font-weight: 600;
+  }
+
 @media screen and (min-width: 860px) and (max-width: 860px) {
 
   .buttonGroup {
@@ -109,9 +135,9 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .projects {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
