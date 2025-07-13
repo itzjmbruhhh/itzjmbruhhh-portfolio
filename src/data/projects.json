@@ -16,7 +16,7 @@
         "tag" : ["All", "Mobile"],
         "techStack" : ["Android Studio", "Java"],
         "links": [
-            {"url": "https://github.com/JMReyes1014/OOP-Finals-Project", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", "name": "GitHub"}
+            {"url": "https://github.com/itzjmbruhhh/OOP-Finals-Project", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", "name": "GitHub"}
         ]
     },
     {
@@ -26,7 +26,17 @@
         "tag" : ["All", "Web"],
         "techStack" : ["Django", "React", "Tensorflow"],
         "links": [
-            {"url": "https://github.com/JMReyes1014/NPK_Deficiency_Classifier", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", "name": "GitHub"}
+            {"url": "https://github.com/itzjmbruhhh/NPK_Deficiency_Classifier", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", "name": "GitHub"}
+        ]
+    },
+    {
+        "title" : " Leaf It Up to Me ",
+        "description" : "a web application designed to detect coffee leaf diseases using a Convolutional Neural Network (CNN) based on MobileNetV2 architecture.",
+        "image" : "src/assets/projects/4.png",
+        "tag" : ["Web"],
+        "techStack" : ["PHP", "HTML", "CSS", "JavaScript", "Tensorflow"],
+        "links": [
+            {"url": "https://github.com/itzjmbruhhh/coffee_leaf_diseases_classifier", "icon": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg", "name": "GitHub"}
         ]
     }
 ]
