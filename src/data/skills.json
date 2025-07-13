@@ -4,16 +4,8 @@
         "imageSrc" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
     },
     {
-        "title": "Java",
-        "imageSrc" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
-    },
-    {
         "title": "JavaScript",
         "imageSrc" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg"
-    },
-    {
-        "title": "MySQL",
-        "imageSrc" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
     },
     {
         "title": "React",
@@ -28,7 +20,7 @@
         "imageSrc" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg"
     },
     {
-        "title": "Keras",
-        "imageSrc" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original.svg"
+        "title": "MySQL",
+        "imageSrc" : "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
     }
 ]
