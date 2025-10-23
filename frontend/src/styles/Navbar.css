@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@import "../index.css";
+
+@layer components {
+
+    .header-wrapper {
+        @apply flex items-center justify-between px-4 py-3;
+    }
+
+    .rn-header {
+        @apply fixed top-0 z-999 w-full p-2 transition-all duration-200;
+    }
+
+    .header-scrolled {
+        @apply backdrop-blur-md shadow-xl/20;
+    }
+
+    .header-left {
+        @apply ml-7 pr-[15px] pl-[15px];
+    }
+
+    .nav-item {
+        @apply mx-10;
+    }
+
+    .nav-link {
+        @apply hover:text-(--color-secondary) transition-colors duration-100 font-medium text-sm;
+    }
+}
