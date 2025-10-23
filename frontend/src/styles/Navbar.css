@@ -2,28 +2,53 @@
 @import "../index.css";
 
 @layer components {
+  .header-wrapper {
+    @apply flex items-center justify-between xl:px-4 py-3 sm:px-0 md:px-14;
+  }
 
-    .header-wrapper {
-        @apply flex items-center justify-between xl:px-4 py-3 sm:px-0 md:px-14;
-    }
+  .rn-header {
+    @apply fixed top-0 z-999 w-full p-2 transition-all duration-200;
+  }
 
-    .rn-header {
-        @apply fixed top-0 z-999 w-full p-2 transition-all duration-200;
-    }
+  .header-scrolled {
+    @apply backdrop-blur-md shadow-xl/20;
+  }
 
-    .header-scrolled {
-        @apply backdrop-blur-md shadow-xl/20;
-    }
+  .header-left {
+    @apply xl:ml-7 pr-[15px] pl-[15px];
+  }
 
-    .header-left {
-        @apply xl:ml-7 pr-[15px] pl-[15px];
-    }
+  .nav-item {
+    @apply mx-10;
+  }
 
-    .nav-item {
-        @apply mx-10;
-    }
+  .nav-link {
+    @apply hover:text-(--color-secondary) transition-colors duration-100 font-medium text-sm cursor-pointer;
+  }
 
-    .nav-link {
-        @apply hover:text-(--color-secondary) transition-colors duration-100 font-medium text-sm;
-    }
+  .slider-content {
+    @apply mb-6 m-2 border-b border-(--color-body-2) pb-6 w-[330px] last-of-type:border-0;
+  }
+
+  .item-mobile {
+    @apply m-0 ml-1 last-of-type:pb-[100px] py-4;
+  }
+
+  .mobile {
+    @apply text-[18px] font-normal;
+  }
+
+  .socials-wrapper-mobile {
+    @apply flex content-center gap-5 mt-2;
+  }
+
+  .social-icon {
+  @apply border border-transparent rounded-[10px] w-fit p-2 transition-all duration-300 ease-in-out transform;
+  background: linear-gradient(135deg, #25292e 30%, #2f3236b7 70%);
+}
+
+.social-icon:hover {
+  @apply -translate-y-2 shadow-lg;
+  background: linear-gradient(135deg, #2f3236b7 40%, #25292e 60%);
+}
 }
