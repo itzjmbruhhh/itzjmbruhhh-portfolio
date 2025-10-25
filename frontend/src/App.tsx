@@ -12,6 +12,9 @@ function App() {
       <h1 className='mt-[200px]'>TEST</h1>
 
       <h1 className="mt-[10000px]">Hello</h1>
+
+      <section id='education'></section>
+      <h1 className='mt-[200px]'>TEST</h1>
     </>
   )
 }

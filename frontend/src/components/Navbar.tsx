@@ -4,10 +4,18 @@ import "../styles/Navbar.css";
 import NavLinks from "./NavLinks";
 import Hamburger from "./Hamburger";
 import MobileMenu from "./MobileMenu";
+import useScrollSpy from "../hooks/useScrollSpy";
 
 function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const activeId = useScrollSpy([
+    "home",
+    "experience",
+    "education",
+    "resume",
+    "projects",
+  ]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -61,7 +69,7 @@ function Navbar() {
           {/* Desktop Nav (unchanged styling) - visible on md+ */}
           <div className="header-right mr-7 hidden xl:block">
             <nav>
-              <NavLinks />
+              <NavLinks activeId={activeId} />
             </nav>
           </div>
 
@@ -77,7 +85,11 @@ function Navbar() {
       </header>
 
       {/* Render mobile menu outside header so it's not trapped by header's stacking context */}
-      <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} />
+      <MobileMenu
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        activeId={activeId}
+      />
     </>
   );
 }

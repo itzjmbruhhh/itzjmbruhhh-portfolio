@@ -4,9 +4,14 @@ import NavLinksMobile from "./NavLinksMobile";
 type MobileMenuProps = {
   open: boolean;
   onClose: () => void;
+  activeId?: string | null;
 };
 
-export default function MobileMenu({ open, onClose }: MobileMenuProps) {
+export default function MobileMenu({
+  open,
+  onClose,
+  activeId = null,
+}: MobileMenuProps) {
   return (
     <>
       {/* Overlay */}
@@ -69,7 +74,11 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
           <div className="slider-content">
             <nav className="xl:hidden">
               <div className="space-y-4">
-                <NavLinksMobile onLinkClick={onClose} className="flex flex-col" />
+                <NavLinksMobile
+                  onLinkClick={onClose}
+                  className="flex flex-col"
+                  activeId={activeId}
+                />
               </div>
             </nav>
           </div>
@@ -77,11 +86,25 @@ export default function MobileMenu({ open, onClose }: MobileMenuProps) {
 
           {/* Socials Start */}
           <div className="slider-content">
-            <h2 className="item-mobile py-0 text-[18px] font-normal">FIND ME</h2>
+            <h2 className="item-mobile py-0 text-[18px] font-normal">
+              FIND ME
+            </h2>
             <ul className="socials-wrapper-mobile">
-                <a href="" target="_blank"><li className="socials-wrapper-mobile social-icon"><i className="lab la-instagram text-4xl"></i></li></a>
-                <a href="" target="_blank"><li className="socials-wrapper-mobile social-icon"><i className="lab la-github text-4xl"></i></li></a>
-                <a href="" target="_blank"><li className="socials-wrapper-mobile social-icon"><i className="lab la-linkedin text-4xl"></i></li></a>
+              <a href="" target="_blank">
+                <li className="socials-wrapper-mobile social-icon">
+                  <i className="lab la-instagram text-4xl"></i>
+                </li>
+              </a>
+              <a href="" target="_blank">
+                <li className="socials-wrapper-mobile social-icon">
+                  <i className="lab la-github text-4xl"></i>
+                </li>
+              </a>
+              <a href="" target="_blank">
+                <li className="socials-wrapper-mobile social-icon">
+                  <i className="lab la-linkedin text-4xl"></i>
+                </li>
+              </a>
             </ul>
           </div>
           {/* Socials End */}
