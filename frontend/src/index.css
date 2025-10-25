@@ -15,6 +15,9 @@
   --font-primary: "Poppins", sans-serif;
   --font-secondary: "Montserrat", sans-serif;
 
+  /* height of the fixed header - adjust if your header changes size */
+  --header-h: 150px;
+
   font-family: var(--font-primary);
   line-height: 1.5;
   font-weight: 400;
@@ -30,5 +33,5 @@
 }
 
 html {
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
