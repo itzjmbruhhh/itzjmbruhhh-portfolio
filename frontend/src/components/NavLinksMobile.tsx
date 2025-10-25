@@ -14,7 +14,7 @@ export default function NavLinksMobile({
       className={`${className} flex gap-2 xl:flex-row flex-col xl:flex xl:items-center`}
     >
       <li className="nav-item item-mobile">
-        <a className="nav-link mobile" href="/" onClick={onLinkClick}>
+        <a className="nav-link mobile" href="#home" onClick={onLinkClick}>
           HOME
         </a>
       </li>

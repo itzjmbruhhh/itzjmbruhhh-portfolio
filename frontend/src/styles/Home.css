@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+.container {
+    @apply flex xl:flex-row md:flex-col flex-col space-x-4 justify-center align-middle p-10;
+}
+
+
+.home-left {
+    @apply  xl:ml-0 flex justify-center p-2;
+}
+
+.home-right {
+    @apply  xl:ml-0 hidden xl:flex justify-center p-2;
+}
+
+.info-text {
+    @apply first-of-type:mt-4 ml-1 text-[12px] md:text-[16px] xl:text-[16px] text-(--color-body-3) font-normal;
+}
+
+.box-shadow {
+  @apply border border-transparent rounded-[5px] p-2 transition-all duration-300 ease-in-out transform;
+  box-shadow:
+    -6px -6px 12px rgba(255, 255, 255, 0.08), /* soft light top-left */
+     6px  6px 12px rgba(0, 0, 0, 0.4);        /* soft dark bottom-right */
+  background: var(--background-color-2);
+}
+
+.hover {
+  @apply transition-all duration-300 ease-in-out transform;
+}
+
+.hover:hover {
+  @apply -translate-y-1 shadow-lg;
+}
+
+.image-container:hover {
+@apply border border-transparent rounded-[5px] p-2 transition-all duration-300 ease-in-out transform;
+  box-shadow:
+    -6px -6px 12px rgba(255, 255, 255, 0.08), /* soft light top-left */
+     6px  6px 12px rgba(0, 0, 0, 0.4);        /* soft dark bottom-right */
+  background: var(--background-color-2);
+}
+
+.cv-button {
+    @apply text-(--color-primary) px-6; 
+}
+
+.cv-button:hover {
+    @apply bg-(--color-tertiary) border border-transparent rounded-[5px] transition-all duration-300 ease-in-out transform cursor-pointer;
+  box-shadow:
+    -6px -6px 12px rgba(255, 255, 255, 0.08), /* soft light top-left */
+     6px  6px 12px rgba(0, 0, 0, 0.4);        /* soft dark bottom-right */
+}
