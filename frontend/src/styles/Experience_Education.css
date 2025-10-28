@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+
+.card-container {
+    @apply flex flex-col gap-5 xl:flex-row xl:justify-center xl:gap-8;
+}
+
+.single-card {
+    @apply xl:w-[33%] flex flex-col gap-4 max-w-[450px] xl:max-w-[33%] mx-auto xl:mx-0;
+}
+
+.content-wrapper {
+    @apply mt-2 mx-4 gap-4 flex flex-col xl:flex-row xl:items-start;
+}
+
+.image-wrapper {
+    @apply relative overflow-hidden rounded-[5px] shrink-0 w-full md:w-[400px] xl:w-[35%] h-auto xl:h-[120px];
+}
+
+.image {
+    @apply w-full h-full object-cover transform transition-transform duration-500 ease-in-out hover:scale-105;
+}
+
+.info-wrapper {
+    @apply flex flex-col gap-2 mt-4 xl:mt-0;
+}
+
+span {
+    @apply border py-0.5 px-1.5 rounded-3xl text-[12px] border-(--color-body) bg-(--color-body) text-(--color-gray) w-fit;
+}
+
+h3 {
+    @apply text-[18px] xl:text-2xl font-medium xl:font-semibold;
+}

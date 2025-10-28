@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Experience.css";
+import "../styles/Experience_Education.css";
 import Image from "../assets/images/home.jpg";
 
 function Experience() {
@@ -13,28 +13,21 @@ function Experience() {
         </div>
 
         {/* Experience Cards Container */}
-        <div className="flex flex-col gap-5 xl:flex-row xl:justify-center xl:gap-8">
+        <div className="card-container">
+
           {/* Single Experience Card */}
-          <div className="box-shadow xl:w-[33%] flex flex-col gap-4 max-w-[450px] xl:max-w-[33%] mx-auto xl:mx-0">
-            <div className="mt-2 mx-4 gap-4 flex flex-col xl:flex-row xl:items-start">
+          <div className="single-card box-shadow">
+            <div className="content-wrapper">
               {/* Image Wrapper */}
-              <div className="relative overflow-hidden rounded-[5px] shrink-0 w-full md:w-[400px] xl:w-[35%] h-auto xl:h-[120px]">
-                <img
-                  src={Image}
-                  alt="pic"
-                  className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out hover:scale-110"
-                />
+              <div className="image-wrapper">
+                <img src={Image} alt="pic" className="image" />
               </div>
 
               {/* Info Wrapper */}
-              <div className="info-wrapper flex flex-col gap-2 mt-4 xl:mt-0">
-                <span className="border py-0.5 px-1.5 rounded-3xl text-[12px] border-(--color-body) bg-(--color-body) text-(--color-gray) w-fit">
-                  2022–present
-                </span>
+              <div className="info-wrapper">
+                <span>2022–present</span>
 
-                <h3 className="text-[18px] xl:text-2xl font-medium xl:font-semibold">
-                  Frontend Development
-                </h3>
+                <h3 className="">Frontend Development</h3>
 
                 <div>
                   <p className="text-[16px] xl:text-xl">Lorem ipsum dolor.</p>
@@ -48,26 +41,18 @@ function Experience() {
           {/* End of Single Experience Card */}
 
           {/* Single Experience Card */}
-          <div className="box-shadow xl:w-[33%] flex flex-col gap-4 max-w-[450px] xl:max-w-[33%] mx-auto xl:mx-0">
-            <div className="mt-2 mx-4 gap-4 flex flex-col xl:flex-row xl:items-start">
+          <div className="single-card box-shadow">
+            <div className="content-wrapper">
               {/* Image Wrapper */}
-              <div className="relative overflow-hidden rounded-[5px] shrink-0 w-full md:w-[400px] xl:w-[35%] h-auto xl:h-[120px]">
-                <img
-                  src={Image}
-                  alt="pic"
-                  className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out hover:scale-110"
-                />
+              <div className="image-wrapper">
+                <img src={Image} alt="pic" className="image" />
               </div>
 
               {/* Info Wrapper */}
-              <div className="info-wrapper flex flex-col gap-2 mt-4 xl:mt-0">
-                <span className="border py-0.5 px-1.5 rounded-3xl text-[12px] border-(--color-body) bg-(--color-body) text-(--color-gray) w-fit">
-                  2022–present
-                </span>
+              <div className="info-wrapper">
+                <span>2022–present</span>
 
-                <h3 className="text-[18px] xl:text-2xl font-medium xl:font-semibold">
-                  Frontend Development
-                </h3>
+                <h3 className="">Frontend Development</h3>
 
                 <div>
                   <p className="text-[16px] xl:text-xl">Lorem ipsum dolor.</p>
@@ -79,27 +64,20 @@ function Experience() {
             </div>
           </div>
           {/* End of Single Experience Card */}
+
           {/* Single Experience Card */}
-          <div className="box-shadow xl:w-[33%] flex flex-col gap-4 max-w-[450px] xl:max-w-[33%] mx-auto xl:mx-0">
-            <div className="mt-2 mx-4 gap-4 flex flex-col xl:flex-row xl:items-start">
+          <div className="single-card box-shadow">
+            <div className="content-wrapper">
               {/* Image Wrapper */}
-              <div className="relative overflow-hidden rounded-[5px] shrink-0 w-full md:w-[400px] xl:w-[35%] h-auto xl:h-[120px]">
-                <img
-                  src={Image}
-                  alt="pic"
-                  className="w-full h-full object-cover transform transition-transform duration-500 ease-in-out hover:scale-110"
-                />
+              <div className="image-wrapper">
+                <img src={Image} alt="pic" className="image" />
               </div>
 
               {/* Info Wrapper */}
-              <div className="info-wrapper flex flex-col gap-2 mt-4 xl:mt-0">
-                <span className="border py-0.5 px-1.5 rounded-3xl text-[12px] border-(--color-body) bg-(--color-body) text-(--color-gray) w-fit">
-                  2022–present
-                </span>
+              <div className="info-wrapper">
+                <span>2022–present</span>
 
-                <h3 className="text-[18px] xl:text-2xl font-medium xl:font-semibold">
-                  Frontend Development
-                </h3>
+                <h3 className="">Frontend Development</h3>
 
                 <div>
                   <p className="text-[16px] xl:text-xl">Lorem ipsum dolor.</p>
