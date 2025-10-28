@@ -4,8 +4,8 @@ import HomeRight from "../components/HomeRight";
 
 function Home() {
   return (
-    <section className="home-page scroll-mt-(--header-h)" id="home">
-      <div className="home-page-wrapper mx-20 mt-30 flex justify-center">
+    <section className="scroll-mt-(--header-h)" id="home">
+      <div className="wrapper">
         <div>
           <div className="container">
             <HomeLeft />

@@ -26,7 +26,7 @@ function HomeLeft() {
             <ul>
               <li className="info-text mt-2 flex items-center gap-2">
                 <i className="lar la-sticky-note text-3xl text-(--color-primary)"></i>
-                <span>AI</span>
+                <span>Web & AI Developer</span>
               </li>
 
               <li className="info-text mt-2 flex items-center gap-2">
@@ -49,10 +49,10 @@ function HomeLeft() {
               Download my curriculum vitae:
             </p>
             <div className="flex xl:space-x-5 space-y-5 py-5 flex-col xl:flex-row xl:space-y-0 md:space-y-0 md:space-x-5 md:flex-row">
-              <button className="box-shadow hover cv-button">
-                Download CV
+              <button className="box-shadow hover cv-button font-medium">
+                DOWNLOAD CV
               </button>
-              <button className="box-shadow hover cv-button">Contact Me</button>
+              <button className="box-shadow hover cv-button font-medium">CONTACT ME</button>
             </div>
           </div>
         </div>

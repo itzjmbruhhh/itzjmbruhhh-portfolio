@@ -11,7 +11,7 @@
   }
 
   .header-scrolled {
-    @apply backdrop-blur-md shadow-xl/20;
+    @apply backdrop-blur-lg shadow-xl/20;
   }
 
   .header-left {

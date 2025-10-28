@@ -1,5 +1,6 @@
 import './App.css'
 import Navbar from './components/Navbar'
+import Experience from './pages/Experience'
 import Home from './pages/Home'
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <>
       <Navbar />
       <Home />
+      <Experience />
 
       <h1 className='mt-[200px]'>TEST</h1>
 
