@@ -24,10 +24,10 @@
     @apply flex flex-col gap-2 mt-4 xl:mt-0;
 }
 
-span {
+.span {
     @apply border py-0.5 px-1.5 rounded-3xl text-[12px] border-(--color-body) bg-(--color-body) text-(--color-gray) w-fit;
 }
 
-h3 {
+.h3 {
     @apply text-[18px] xl:text-2xl font-medium xl:font-semibold;
 }

@@ -25,34 +25,9 @@ function Experience() {
 
               {/* Info Wrapper */}
               <div className="info-wrapper">
-                <span>2022–present</span>
+                <span className="span">2022–present</span>
 
-                <h3 className="">Frontend Development</h3>
-
-                <div>
-                  <p className="text-[16px] xl:text-xl">Lorem ipsum dolor.</p>
-                  <p className="text-[14px] xl:text-[18px] text-(--color-body-2)">
-                    Lorem ipsum dolor.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          {/* End of Single Experience Card */}
-
-          {/* Single Experience Card */}
-          <div className="single-card box-shadow">
-            <div className="content-wrapper">
-              {/* Image Wrapper */}
-              <div className="image-wrapper">
-                <img src={Image} alt="pic" className="image" />
-              </div>
-
-              {/* Info Wrapper */}
-              <div className="info-wrapper">
-                <span>2022–present</span>
-
-                <h3 className="">Frontend Development</h3>
+                <h3 className="h3">Frontend Development</h3>
 
                 <div>
                   <p className="text-[16px] xl:text-xl">Lorem ipsum dolor.</p>
@@ -75,9 +50,34 @@ function Experience() {
 
               {/* Info Wrapper */}
               <div className="info-wrapper">
-                <span>2022–present</span>
+                <span className="span">2022–present</span>
 
-                <h3 className="">Frontend Development</h3>
+                <h3 className="h3">Frontend Development</h3>
+
+                <div>
+                  <p className="text-[16px] xl:text-xl">Lorem ipsum dolor.</p>
+                  <p className="text-[14px] xl:text-[18px] text-(--color-body-2)">
+                    Lorem ipsum dolor.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* End of Single Experience Card */}
+
+          {/* Single Experience Card */}
+          <div className="single-card box-shadow">
+            <div className="content-wrapper">
+              {/* Image Wrapper */}
+              <div className="image-wrapper">
+                <img src={Image} alt="pic" className="image" />
+              </div>
+
+              {/* Info Wrapper */}
+              <div className="info-wrapper">
+                <span className="span">2022–present</span>
+
+                <h3 className="h3">Frontend Development</h3>
 
                 <div>
                   <p className="text-[16px] xl:text-xl">Lorem ipsum dolor.</p>
