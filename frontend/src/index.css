@@ -2,9 +2,12 @@
 
 :root {
   --color-primary: #ff014f;
+  --color-primary-2: #e4517dd7;
+  --color-primary-3: #8a1016;
   --color-primary-opaque: #611d31;
   --color-secondary: #f4f5f6;
   --color-tertiary: #0d1013;
+  --color-tertiary-2: #1f2225;
   --color-gray: #f6f6f6;
   --color-subtitle: #f9004d;
   --background-color-1: linear-gradient(145deg, #1e2024, #23272b);

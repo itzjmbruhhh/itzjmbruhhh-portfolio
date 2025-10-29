@@ -2,7 +2,7 @@ import React from "react";
 
 function Activities() {
   return (
-    <div>
+    <div data-aos="fade-up" data-aos-duration="600">
       {/* Section Heading */}
       <div className="mb-10">
         <h3 className="res-bio">2022-present</h3>

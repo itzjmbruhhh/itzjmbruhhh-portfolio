@@ -17,7 +17,7 @@ function Skills() {
   ];
 
   return (
-    <div>
+    <div data-aos="fade-up" data-aos-duration="600">
       {/* Content Start */}
       <div className="flex flex-col xl:flex-row justify-center xl:px-25 gap-12">
         {/* Web Dev Start */}

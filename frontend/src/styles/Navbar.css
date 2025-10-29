@@ -31,7 +31,7 @@
   }
 
   .item-mobile {
-    @apply m-0 ml-1 last-of-type:pb-[100px] py-4;
+    @apply m-0 ml-1 md:last-of-type:pb-[100px] xl:last-of-type:pb-[100px] py-4;
   }
 
   .mobile {
