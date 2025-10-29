@@ -13,7 +13,7 @@
 }
 
 .info-text {
-    @apply first-of-type:mt-4 ml-1 text-[12px] md:text-[16px] xl:text-[16px] text-(--color-body-3) font-normal;
+    @apply text-justify first-of-type:mt-4 ml-1 text-[12px] md:text-[16px] xl:text-[16px] text-(--color-body-3) font-normal;
 }
 
 .hover {

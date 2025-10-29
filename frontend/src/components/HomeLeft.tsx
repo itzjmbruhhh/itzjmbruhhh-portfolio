@@ -9,8 +9,8 @@ function HomeLeft() {
         {/* Info Header Start */}
 
           <div className="info-header pb-0 p-4">
-            <i className="lar la-user text-2xl border-9 p-1 rounded-full border-(--color-primary-opaque) bg-(--color-primary) text-white"></i>
-            <h1 className="mt-4 ml-1 font-extrabold text-(--color-secondary) text-3xl md:text-6xl xl:text-6xl">
+            <div className="flex justify-center md:justify-start xl:justify-start"><i className="lar la-user text-2xl border-9 p-1 rounded-full border-(--color-primary-opaque) bg-(--color-primary) text-white"></i></div>
+            <h1 className="mt-4 ml-1 font-extrabold text-(--color-secondary) text-2xl md:text-6xl xl:text-6xl">
               Hi, I'm <span className="text-(--color-primary)">JM Reyes</span>
             </h1>
             <p className="info-text">

@@ -4,7 +4,7 @@ import Image from "../assets/images/home.jpg";
 
 function Education() {
   return (
-     <section id="education" className="scroll-mt-[220px]">
+     <section id="education" className="scroll-mt-[150px] xl:scroll-mt-[220px]">
       <div className="wrapper flex flex-col gap-10">
         {/* Section Heading */}
         <div className="xl:mb-5" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="500">

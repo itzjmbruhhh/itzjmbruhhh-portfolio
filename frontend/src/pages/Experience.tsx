@@ -4,7 +4,7 @@ import Image from "../assets/images/home.jpg";
 
 function Experience() {
   return (
-    <section id="experience" className="scroll-mt-[220px]">
+    <section id="experience" className="scroll-mt-[150px] xl:scroll-mt-[220px]">
       <div className="wrapper flex flex-col gap-10">
         {/* Section Heading */}
         <div className="xl:mb-5" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="500">
@@ -16,18 +16,15 @@ function Experience() {
         <div className="card-container" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="500" data-aos-delay="100">
 
           {/* Single Experience Card */}
-          <div className="single-card box-shadow">
+          <div className="single-card-exp box-shadow">
             <div className="content-wrapper">
-              {/* Image Wrapper */}
-              <div className="image-wrapper">
-                <img src={Image} alt="pic" className="image" />
-              </div>
+              
 
               {/* Info Wrapper */}
-              <div className="info-wrapper">
-                <span className="span">2022–present</span>
+              <div className="info-wrapper-exp">
+                <i className="las la-desktop text-(--color-primary) text-6xl"></i>
 
-                <h3 className="h3">Frontend Development</h3>
+                <h3 className="h3-exp">Frontend Development</h3>
 
                 <div>
                   <p className="text-[16px] xl:text-xl">Lorem ipsum dolor.</p>
@@ -41,18 +38,15 @@ function Experience() {
           {/* End of Single Experience Card */}
 
           {/* Single Experience Card */}
-          <div className="single-card box-shadow">
+          <div className="single-card-exp box-shadow">
             <div className="content-wrapper">
-              {/* Image Wrapper */}
-              <div className="image-wrapper">
-                <img src={Image} alt="pic" className="image" />
-              </div>
+              
 
               {/* Info Wrapper */}
-              <div className="info-wrapper">
-                <span className="span">2022–present</span>
+              <div className="info-wrapper-exp">
+                <i className="las la-code text-(--color-primary) text-6xl"></i>
 
-                <h3 className="h3">Frontend Development</h3>
+                <h3 className="h3-exp">Backend Development</h3>
 
                 <div>
                   <p className="text-[16px] xl:text-xl">Lorem ipsum dolor.</p>
@@ -66,18 +60,15 @@ function Experience() {
           {/* End of Single Experience Card */}
 
           {/* Single Experience Card */}
-          <div className="single-card box-shadow">
+          <div className="single-card-exp box-shadow">
             <div className="content-wrapper">
-              {/* Image Wrapper */}
-              <div className="image-wrapper">
-                <img src={Image} alt="pic" className="image" />
-              </div>
+              
 
               {/* Info Wrapper */}
-              <div className="info-wrapper">
-                <span className="span">2022–present</span>
+              <div className="info-wrapper-exp">
+                <i className="las la-robot text-(--color-primary) text-6xl"></i>
 
-                <h3 className="h3">Frontend Development</h3>
+                <h3 className="h3-exp">Machine Learning</h3>
 
                 <div>
                   <p className="text-[16px] xl:text-xl">Lorem ipsum dolor.</p>
@@ -89,6 +80,7 @@ function Experience() {
             </div>
           </div>
           {/* End of Single Experience Card */}
+
         </div>
       </div>
     </section>
