@@ -27,7 +27,7 @@
 }
 
 .res-heading {
-  @apply flex xl:ml-[10%] md:ml-[10%] xl:justify-start md:justify-start justify-center text-[24px] xl:text-5xl font-bold text-(--color-body);
+  @apply flex xl:ml-[10%] md:ml-[10%] xl:justify-start md:justify-start justify-center text-[20px] xl:text-3xl font-bold text-(--color-body);
 }
 
 .res-bio {
