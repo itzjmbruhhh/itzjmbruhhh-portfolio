@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 .wrapper {
-    @apply mx-20 mt-30 flex justify-center pb-30 border-b border-(--color-tertiary)
+    @apply mx-5 mt-10 xl:mx-20 xl:mt-30 flex justify-center pb-30 border-b border-(--color-tertiary)
 }
 
 .box-shadow {

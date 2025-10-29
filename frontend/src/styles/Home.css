@@ -5,7 +5,7 @@
 }
 
 .home-left {
-    @apply  xl:ml-0 flex justify-center p-2;
+    @apply  xl:ml-0 mx-0 flex justify-center p-2;
 }
 
 .home-right {
