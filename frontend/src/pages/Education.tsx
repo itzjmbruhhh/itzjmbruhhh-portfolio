@@ -4,16 +4,16 @@ import Image from "../assets/images/home.jpg";
 
 function Education() {
   return (
-     <section id="education" className="scroll-mt-40 py-10">
+     <section id="education" className="scroll-mt-[220px]">
       <div className="wrapper flex flex-col gap-10">
         {/* Section Heading */}
-        <div className="xl:mb-5">
+        <div className="xl:mb-5" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="500">
           <h3 className="bio">HS, SHS, College</h3>
           <h1 className="heading flex justify-center">My Education</h1>
         </div>
 
         {/* Education Cards Container */}
-        <div className="card-container">
+        <div className="card-container" data-aos="fade-up" data-aos-anchor-placement="top-center" data-aos-duration="500" data-aos-delay="100">
 
           {/* Single Education Card */}
           <div className="single-card box-shadow">

@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+.box-shadow-res {
+  @apply border border-transparent rounded-[5px] transition-all duration-300 ease-in-out transform;
+  box-shadow:
+    -6px -6px 12px rgba(255, 255, 255, 0.04),
+     6px  6px 12px rgba(0, 0, 0, 0.2);
+  background: var(--background-color-2);
+}
+
+.nav-item-res {
+   @apply text-center xl:w-[33%] p-5 text-xl;
+}
+
+.nav-item-res:hover {
+   @apply transition-all duration-300 ease-in-out transform text-(--color-primary);
+  box-shadow:
+    -6px -6px 12px rgba(255, 255, 255, 0.04),
+     6px  6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.active {
+   @apply text-(--color-primary);
+  box-shadow:
+    -6px -6px 12px rgba(255, 255, 255, 0.04),
+     6px  6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+ul, #tree {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+caret {
+   cursor: pointer;
+   user-select: none;
+}
+caret::before {
+   content: "\25B6"; /* Right arrow */
+   margin-right: 6px;
+}
+caret-down::before {
+   transform: rotate(90deg); /* Down arrow */
+}
+nested {
+   display: none;
+}
+active {
+   display: block;
+}

@@ -4,16 +4,16 @@ import Image from "../assets/images/home.jpg";
 
 function Experience() {
   return (
-    <section id="experience" className="scroll-mt-[150px] py-10">
+    <section id="experience" className="scroll-mt-[220px]">
       <div className="wrapper flex flex-col gap-10">
         {/* Section Heading */}
-        <div className="xl:mb-5">
+        <div className="xl:mb-5" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="500">
           <h3 className="bio">OVER 3 YEARS OF EXPERIENCE</h3>
           <h1 className="heading flex justify-center">My Experience</h1>
         </div>
 
         {/* Experience Cards Container */}
-        <div className="card-container">
+        <div className="card-container" data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="500" data-aos-delay="100">
 
           {/* Single Experience Card */}
           <div className="single-card box-shadow">
