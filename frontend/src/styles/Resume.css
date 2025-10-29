@@ -2,49 +2,58 @@
 
 .box-shadow-res {
   @apply border border-transparent rounded-[5px] transition-all duration-300 ease-in-out transform;
-  box-shadow:
-    -6px -6px 12px rgba(255, 255, 255, 0.04),
-     6px  6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: -6px -6px 12px rgba(255, 255, 255, 0.04),
+    6px 6px 12px rgba(0, 0, 0, 0.2);
   background: var(--background-color-2);
 }
 
+.box-shadow-resume {
+  @apply p-2 md:px-6 xl:px-6 border border-transparent rounded-[5px] transform;
+  box-shadow: -6px -6px 12px rgba(255, 255, 255, 0.04),
+    6px 6px 12px rgba(0, 0, 0, 0.2);
+  background: var(--background-color-1);
+  transition: background-color 0.6s ease-in-out, box-shadow 0.4s ease-in-out, transform 0.3s ease;
+}
+
+.box-shadow-resume:hover {
+  background: var(--background-color-1-5);
+  box-shadow: -8px -8px 14px rgba(255, 255, 255, 0.05),
+    8px 8px 14px rgba(0, 0, 0, 0.25);
+}
+
+
 .nav-item-res {
-   @apply text-center xl:w-[33%] p-5 text-xl px-4 py-6 font-medium cursor-pointer transition-colors duration-300 ease-in-out;
+  @apply text-center xl:w-[33%] p-5 text-xl px-4 py-6 font-medium cursor-pointer transition-colors duration-300 ease-in-out;
 }
 
 .res-heading {
-    @apply flex xl:ml-[10%] md:ml-[10%] xl:justify-start md:justify-start justify-center text-[24px] xl:text-5xl font-bold text-(--color-body) ;
+  @apply flex xl:ml-[10%] md:ml-[10%] xl:justify-start md:justify-start justify-center text-[24px] xl:text-5xl font-bold text-(--color-body);
 }
 
 .res-bio {
-    @apply flex xl:ml-[10%] md:ml-[10%] xl:justify-start md:justify-start justify-center text-[12px] xl:text-[14px] text-center text-(--color-primary) mb-1.5;
+  @apply flex xl:ml-[10%] md:ml-[10%] xl:justify-start md:justify-start justify-center text-[12px] xl:text-[14px] text-center text-(--color-primary) mb-1.5;
 }
 
 /* Only apply these hover effects on xl and up */
 @media (min-width: 1280px) {
   .nav-item-res:hover {
     @apply transform text-(--color-primary) border-b-2 border-(--color-primary);
-    box-shadow:
-      -6px -6px 12px rgba(255, 255, 255, 0.04),
-       0px  0px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: -6px -6px 12px rgba(255, 255, 255, 0.04),
+      0px 0px 12px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
   }
 
   .active {
-   @apply transform text-(--color-primary) border-b-2 border-(--color-primary);
-    box-shadow:
-      -6px -6px 12px rgba(255, 255, 255, 0.04),
-       0px  0px 12px rgba(0, 0, 0, 0.2);
+    @apply transform text-(--color-primary) border-b-2 border-(--color-primary);
+    box-shadow: -6px -6px 12px rgba(255, 255, 255, 0.04),
+      0px 0px 12px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
+  }
 }
 
-}
-
-
-  .active {
-   @apply w-full xl:w-[33%] transform text-(--color-primary) border-b-2 border-(--color-primary);
-    box-shadow:
-      -6px -6px 12px rgba(255, 255, 255, 0.04),
-       0px  0px 12px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s ease-in-out;
+.active {
+  @apply w-full xl:w-[33%] transform text-(--color-primary) border-b-2 border-(--color-primary);
+  box-shadow: -6px -6px 12px rgba(255, 255, 255, 0.04),
+    0px 0px 12px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
 }

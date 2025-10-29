@@ -8,7 +8,7 @@ import Certifications from "./Certifications";
 function Resume() {
   const [activeTab, setActiveTab] = useState("activities");
   return (
-    <section id="resume">
+    <section id="resume" className="scroll-mt-[180px]">
       <div className="wrapper flex flex-col gap-10">
         {/* Section Heading */}
         <div

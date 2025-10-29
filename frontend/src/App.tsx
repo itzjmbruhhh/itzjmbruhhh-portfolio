@@ -1,14 +1,15 @@
 import "./App.css";
 import { useEffect } from "react";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import Navbar from "./components/Navbar";
 import Education from "./pages/Education";
 import Experience from "./pages/Experience";
 import Home from "./pages/Home";
 import Resume from "./pages/Resume";
-
-// AOS (Animate On Scroll)
-import AOS from "aos";
-import "aos/dist/aos.css";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
   useEffect(() => {
@@ -29,8 +30,7 @@ function App() {
       <Experience />
       <Education />
       <Resume />
-
-      <h1 className="mt-[200px]">TEST</h1>
+      <ScrollToTopButton />
     </>
   );
 }

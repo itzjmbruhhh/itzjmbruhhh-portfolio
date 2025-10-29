@@ -11,7 +11,30 @@ function Activities() {
 
       <div className="flex flex-col xl:flex-row justify-center xl:px-30">
         {/* 1st Tree Start */}
-        <div className="relative border-l-8 border-(--color-tertiary) ml-6 w-[50%]">
+        <div className="relative border-l-8 border-(--color-tertiary) ml-6 w-[83%] md:w-[95%] xl:w-[50%]">
+
+        {/* Single Node */}
+          <div className="group relative mb-8 pl-6">
+            {/* Circle */}
+            <div className="absolute -left-4 top-6 w-6 h-6 rounded-full bg-(--background-color-2) border-4 border-(--color-tertiary) transition-all duration-300 group-hover:bg-(--color-primary) group-hover:scale-125"></div>
+            {/* Horizontal line */}
+            <div className="absolute left-2 z-[-1] top-8 w-12 h-2 bg-(--color-tertiary)"></div>
+
+            {/* Text content */}
+
+              <div className="box-shadow-resume w-fit min-w-[250px] md:min-w-full md:w-full xl:min-w-full xl:w-full">
+                  <div className="border-b border-(--color-tertiary) mt-2 text-left pb-3 px-5">
+                    <h2 className="text-xl xl:text-3xl font-medium text-(--color-gray)">Heading</h2>
+                    <h3 className="text-[12px] xl:text-[14px]">bio</h3>
+                  </div>
+
+                  <div className="mb-2 pt-3 text-left px-5">
+                    <p className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+              </div>
+
+          </div>
+          {/* Single Node End */}
 
           {/* Single Node */}
           <div className="group relative mb-8 pl-6">
@@ -22,44 +45,74 @@ function Activities() {
 
             {/* Text content */}
 
-              <div className="box-shadow w-fit min-w-[250px] xl:min-w-full xl:w-full">
-
-                  <div>
-                    <h2>Heading</h2>
-                    <h3>bio</h3>
+              <div className="box-shadow-resume w-fit min-w-[250px] md:min-w-full md:w-full xl:min-w-full xl:w-full">
+                  <div className="border-b border-(--color-tertiary) mt-2 text-left pb-3 px-5">
+                    <h2 className="text-xl xl:text-3xl font-medium text-(--color-gray)">Heading</h2>
+                    <h3 className="text-[12px] xl:text-[14px]">bio</h3>
                   </div>
 
-                  <div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <div className="mb-2 pt-3 text-left px-5">
+                    <p className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                   </div>
-
               </div>
 
           </div>
           {/* Single Node End */}
 
-
+        
         </div>
         {/* 1st Tree End */}
 
         {/* 2nd Tree Start */}
-        <div className="relative border-l-8 border-(--color-tertiary) ml-6 w-[50%]">
+        <div className="relative border-l-8 border-(--color-tertiary) ml-6 w-[83%] md:w-[95%] xl:w-[50%]">
 
         {/* Single Node */}
           <div className="group relative mb-8 pl-6">
             {/* Circle */}
             <div className="absolute -left-4 top-6 w-6 h-6 rounded-full bg-(--background-color-2) border-4 border-(--color-tertiary) transition-all duration-300 group-hover:bg-(--color-primary) group-hover:scale-125"></div>
             {/* Horizontal line */}
-            <div className="absolute left-2 top-8 w-4 xl:w-12 h-2 bg-(--color-tertiary)"></div>
+            <div className="absolute left-2 z-[-1] top-8 w-12 h-2 bg-(--color-tertiary)"></div>
 
             {/* Text content */}
-            <h3 className="text-lg font-semibold text-white group-hover:text-(--color-primary) transition-colors ml-16">
-              Root Node
-            </h3>
-            <p className="text-gray-400 ml-16">This is the root of the tree.</p>
+
+              <div className="box-shadow-resume w-fit min-w-[250px] md:min-w-full md:w-full xl:min-w-full xl:w-full">
+                  <div className="border-b border-(--color-tertiary) mt-2 text-left pb-3 px-5">
+                    <h2 className="text-xl xl:text-3xl font-medium text-(--color-gray)">Heading</h2>
+                    <h3 className="text-[12px] xl:text-[14px]">bio</h3>
+                  </div>
+
+                  <div className="mb-2 pt-3 text-left px-5">
+                    <p className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+              </div>
+
           </div>
           {/* Single Node End */}
 
+          {/* Single Node */}
+          <div className="group relative mb-8 pl-6">
+            {/* Circle */}
+            <div className="absolute -left-4 top-6 w-6 h-6 rounded-full bg-(--background-color-2) border-4 border-(--color-tertiary) transition-all duration-300 group-hover:bg-(--color-primary) group-hover:scale-125"></div>
+            {/* Horizontal line */}
+            <div className="absolute left-2 z-[-1] top-8 w-12 h-2 bg-(--color-tertiary)"></div>
+
+            {/* Text content */}
+
+              <div className="box-shadow-resume w-fit min-w-[250px] md:min-w-full md:w-full xl:min-w-full xl:w-full">
+                  <div className="border-b border-(--color-tertiary) mt-2 text-left pb-3 px-5">
+                    <h2 className="text-xl xl:text-3xl font-medium text-(--color-gray)">Heading</h2>
+                    <h3 className="text-[12px] xl:text-[14px]">bio</h3>
+                  </div>
+
+                  <div className="mb-2 pt-3 text-left px-5">
+                    <p className="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                  </div>
+              </div>
+
+          </div>
+          {/* Single Node End */}
+
+        
         </div>
         {/* 2nd Tree End */}
 
