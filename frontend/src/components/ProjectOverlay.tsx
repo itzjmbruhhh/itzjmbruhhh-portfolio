@@ -1,6 +1,7 @@
 import React from "react";
 
 interface Project {
+  techStack: any;
   title: string;
   description: string;
   tags: string[];
@@ -62,13 +63,23 @@ const ProjectOverlay: React.FC<ProjectOverlayProps> = ({
           <h2 className="text-[17px] md:text-2xl xl:text-4xl font-semibold mb-1 text-(--color-gray) text-left">
             {project.title}
           </h2>
-          <p className="text-(--color-body-2) text-[12px] xl:text-[18px]">
+          <p className="text-(--color-body-2) text-[12px] xl:text-[18px] xl:mt-4">
             {project.description}
           </p>
 
+            {/* Tech Stack */}
+            {project.techStack?.map((tech: string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined> | null | undefined, i: any) => (
+              <span
+                key={`tech-${i}`}
+                className="inline-block bg-(--color-secondary)/10 text-(--color-secondary) text-[11px] xl:text-sm px-3 py-1 rounded-full mr-2 mt-4"
+              >
+                {tech}
+              </span>
+            ))}
+
           {/* GitHub Button */}
           {project.url && (
-            <div className="mt-8">
+            <div className="mt-[8%]">
               <a
                 href={project.url}
                 target="_blank"
