@@ -77,7 +77,7 @@
 }
 
 .box-shadow-proj {
-  @apply xl:p-8 xl:mx-5 xl:min-h-[420px] border border-transparent rounded-[20px] transform;
+  @apply p-8 md:mx-5 md:min-h-[420px] xl:mx-5 xl:min-h-[420px] border border-transparent rounded-[20px] transform;
   box-shadow: -6px -6px 12px rgba(255, 255, 255, 0.04),
     6px 6px 12px rgba(0, 0, 0, 0.2);
   background: var(--background-color-1);
