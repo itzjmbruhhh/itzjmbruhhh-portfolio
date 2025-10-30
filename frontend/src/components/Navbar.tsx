@@ -114,17 +114,17 @@ function Navbar() {
 
             {/* Mobile hamburger + theme toggle (hidden xl) */}
             <div className="xl:hidden flex items-center gap-2">
-              <button
+               <button
                 onClick={() =>
                   setTheme((t) => (t === "light" ? "dark" : "light"))
                 }
                 aria-label="Toggle theme"
-                className="p-2 rounded focus:outline-none hover:opacity-90 text-(--color-body-2)"
+                className="theme-toggle-btn text-(--color-body-2)"
               >
                 <i
                   className={`${
                     theme === "light" ? "las la-sun" : "las la-moon"
-                  } text-lg`}
+                  } text-xl`}
                 ></i>
               </button>
               <Hamburger
