@@ -40,7 +40,14 @@ const ProjectOverlay: React.FC<ProjectOverlayProps> = ({
 
         {/* Project Image */}
         <img
-          src={project.image}
+          src={
+            project.image
+              ? new URL(
+                  `../assets/images/projects/${project.image}`,
+                  import.meta.url
+                ).href
+              : ""
+          }
           alt={project.title}
           className="rounded-lg mb-4 md:w-[300px] xl:w-[550px] w-full object-contain"
         />
@@ -67,15 +74,46 @@ const ProjectOverlay: React.FC<ProjectOverlayProps> = ({
             {project.description}
           </p>
 
-            {/* Tech Stack */}
-            {project.techStack?.map((tech: string | number | bigint | boolean | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | Promise<string | number | bigint | boolean | React.ReactPortal | React.ReactElement<unknown, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | null | undefined> | null | undefined, i: any) => (
+          {/* Tech Stack */}
+          {project.techStack?.map(
+            (
+              tech:
+                | string
+                | number
+                | bigint
+                | boolean
+                | React.ReactElement<
+                    unknown,
+                    string | React.JSXElementConstructor<any>
+                  >
+                | Iterable<React.ReactNode>
+                | React.ReactPortal
+                | Promise<
+                    | string
+                    | number
+                    | bigint
+                    | boolean
+                    | React.ReactPortal
+                    | React.ReactElement<
+                        unknown,
+                        string | React.JSXElementConstructor<any>
+                      >
+                    | Iterable<React.ReactNode>
+                    | null
+                    | undefined
+                  >
+                | null
+                | undefined,
+              i: any
+            ) => (
               <span
                 key={`tech-${i}`}
                 className="inline-block bg-(--color-secondary)/10 text-(--color-secondary) text-[11px] xl:text-sm px-3 py-1 rounded-full mr-2 mt-4"
               >
                 {tech}
               </span>
-            ))}
+            )
+          )}
 
           {/* GitHub Button */}
           {project.url && (
