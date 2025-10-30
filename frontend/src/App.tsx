@@ -10,6 +10,7 @@ import Experience from "./pages/Experience";
 import Home from "./pages/Home";
 import Resume from "./pages/Resume";
 import Projects from "./pages/Projects";
+import Footer from "./pages/Footer";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 
 function App() {
@@ -32,9 +33,7 @@ function App() {
       <Education />
       <Resume />
       <Projects />
-
-      <h1 className="mt-90">FOOTER</h1>
-
+      <Footer />
       <ScrollToTopButton />
     </>
   );
