@@ -85,7 +85,7 @@ function Navbar() {
           {/* Left: Logo */}
           <div className="flex items-center">
             <div className="logo">
-              <a href="/">
+              <a href="#">
                 <img src={logo} alt="logo" className="logo-dark" />
                 <img src={logoLight} alt="logo light" className="logo-light" />
               </a>

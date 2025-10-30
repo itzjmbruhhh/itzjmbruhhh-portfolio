@@ -13,7 +13,7 @@
 }
 
 .image-wrapper {
-  @apply relative overflow-hidden shrink-0 w-[370px] md:w-[400px] xl:w-[25%] h-auto xl:h-[120px];
+  @apply flex justify-center relative overflow-hidden shrink-0 w-auto md:w-[400px] xl:w-auto h-auto xl:h-[150px];
 }
 
 .image {

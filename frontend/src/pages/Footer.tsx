@@ -7,7 +7,7 @@ function Footer() {
     <footer id="footer">
       <div className="wrapper max-h-[300px] md:mt-10! md:pb-10! xl:mt-10! xl:pb-10!">
         <center className="flex flex-col  md:flex-row md:gap-10 xl:flex-row xl:gap-10">
-          <a href="/">
+          <a href="#">
             <img src={logo} alt="photo" className="logo-dark" />
             <img src={logoLight} alt="photo light" className="logo-light" />
           </a>
