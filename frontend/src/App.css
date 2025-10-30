@@ -1,25 +1,36 @@
 @import "tailwindcss";
 
 .wrapper {
-    @apply mx-5 mt-10 xl:mx-20 xl:mt-30 flex justify-center pb-30 border-b border-(--color-tertiary)
+  @apply mx-5 mt-10 xl:mx-20 xl:mt-30 flex justify-center pb-30 border-b border-(--color-tertiary);
 }
 
 .box-shadow {
   @apply border border-transparent rounded-[5px] p-2 transition-all duration-300 ease-in-out transform;
-  box-shadow:
-    -6px -6px 12px rgba(255, 255, 255, 0.04),
-     6px  6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: -6px -6px 12px rgba(255, 255, 255, 0.04),
+    6px 6px 12px rgba(0, 0, 0, 0.2);
   background: var(--background-color-2);
 }
 
 .box-shadow:hover {
-   @apply -translate-y-1 ;
+  @apply -translate-y-1;
 }
 
 .heading {
-    @apply text-[30px] xl:text-6xl font-bold text-(--color-body);
+  @apply text-[30px] xl:text-6xl font-bold text-(--color-body);
 }
 
 .bio {
-    @apply text-[12px] xl:text-[18px] text-center text-(--color-primary) mb-1.5;
+  @apply text-[12px] xl:text-[18px] text-center text-(--color-primary) mb-1.5;
+}
+
+/* Light mode: make global .box-shadow cards use grayer gradients and stronger shadows */
+html.light .box-shadow {
+  box-shadow: 0 12px 28px rgba(16, 24, 40, 0.07),
+    0 4px 12px rgba(16, 24, 40, 0.05);
+  background: var(--background-color-1);
+}
+
+html.light .box-shadow:hover {
+  box-shadow: 0 18px 40px rgba(16, 24, 40, 0.1),
+    0 6px 18px rgba(16, 24, 40, 0.07);
 }

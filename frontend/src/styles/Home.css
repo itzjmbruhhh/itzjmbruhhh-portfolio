@@ -1,19 +1,19 @@
 @import "tailwindcss";
 
 .container {
-    @apply flex xl:flex-row md:flex-col flex-col space-x-4 justify-center align-middle p-10;
+  @apply flex xl:flex-row md:flex-col flex-col space-x-4 justify-center align-middle p-10;
 }
 
 .home-left {
-    @apply  xl:ml-0 mx-0 flex justify-center p-2;
+  @apply xl:ml-0 mx-0 flex justify-center p-2;
 }
 
 .home-right {
-    @apply  xl:ml-0 hidden xl:flex justify-center p-2;
+  @apply xl:ml-0 hidden xl:flex justify-center p-2;
 }
 
 .info-text {
-    @apply text-justify first-of-type:mt-4 ml-1 text-[12px] md:text-[16px] xl:text-[16px] text-(--color-body-3) font-normal;
+  @apply text-justify first-of-type:mt-4 ml-1 text-[12px] md:text-[16px] xl:text-[16px] text-(--color-body-3) font-normal;
 }
 
 .hover {
@@ -25,20 +25,31 @@
 }
 
 .image-container:hover {
-@apply border border-transparent rounded-[5px] p-2 transition-all duration-300 ease-in-out transform;
-  box-shadow:
-    -6px -6px 12px rgba(255, 255, 255, 0.04), /* soft light top-left */
-     6px  6px 12px rgba(0, 0, 0, 0.2);        /* soft dark bottom-right */
+  @apply border border-transparent rounded-[5px] p-2 transition-all duration-300 ease-in-out transform;
+  box-shadow: -6px -6px 12px rgba(255, 255, 255, 0.04),
+    /* soft light top-left */ 6px 6px 12px rgba(0, 0, 0, 0.2); /* soft dark bottom-right */
   background: var(--background-color-2);
 }
 
 .cv-button {
-    @apply text-(--color-primary) px-6; 
+  @apply text-(--color-primary) px-6;
 }
 
 .cv-button:hover {
-    @apply bg-(--color-tertiary) border border-transparent rounded-[5px] transition-all duration-300 ease-in-out transform cursor-pointer;
-  box-shadow:
-    -6px -6px 12px rgba(255, 255, 255, 0.04), /* soft light top-left */
-     6px  6px 12px rgba(0, 0, 0, 0.2);        /* soft dark bottom-right */
+  @apply bg-(--color-tertiary) border border-transparent rounded-[5px] transition-all duration-300 ease-in-out transform cursor-pointer;
+  box-shadow: -6px -6px 12px rgba(255, 255, 255, 0.04),
+    /* soft light top-left */ 6px 6px 12px rgba(0, 0, 0, 0.2); /* soft dark bottom-right */
+}
+
+/* Light mode: stronger gray shadows and grayer gradients for hover states */
+html.light .image-container:hover {
+  box-shadow: 0 14px 30px rgba(16, 24, 40, 0.08),
+    0 4px 12px rgba(16, 24, 40, 0.06);
+  background: var(--background-color-1);
+}
+
+html.light .cv-button:hover {
+  box-shadow: 0 14px 30px rgba(16, 24, 40, 0.08),
+    0 4px 12px rgba(16, 24, 40, 0.06);
+  background: var(--background-color-1-5);
 }
