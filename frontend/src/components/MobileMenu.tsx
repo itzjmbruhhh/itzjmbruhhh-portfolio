@@ -1,6 +1,7 @@
 import logo from "../assets/logo/logo.png";
 import logoLight from "../assets/logo/logo-light.png";
 import NavLinksMobile from "./NavLinksMobile";
+import links from "../assets/utils/SocialLinks.json";
 
 type MobileMenuProps = {
   open: boolean;
@@ -96,17 +97,17 @@ export default function MobileMenu({
               FIND ME
             </h2>
             <ul className="socials-wrapper-mobile">
-              <a href="" target="_blank">
+              <a href={links.instagram} target="_blank">
                 <li className="socials-wrapper-mobile social-icon">
                   <i className="lab la-instagram text-4xl"></i>
                 </li>
               </a>
-              <a href="" target="_blank">
+              <a href={links.github} target="_blank">
                 <li className="socials-wrapper-mobile social-icon">
                   <i className="lab la-github text-4xl"></i>
                 </li>
               </a>
-              <a href="" target="_blank">
+              <a href={links.linkedin} target="_blank">
                 <li className="socials-wrapper-mobile social-icon">
                   <i className="lab la-linkedin text-4xl"></i>
                 </li>

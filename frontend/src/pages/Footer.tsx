@@ -1,5 +1,6 @@
 import logo from "../assets/logo/logo-vertical.png";
 import logoLight from "../assets/logo/logo-vertical-light.png";
+import links from "../assets/utils/SocialLinks.json";
 
 function Footer() {
   return (
@@ -13,13 +14,13 @@ function Footer() {
 
           <div className="my-1">
             <ul className="list-none flex flex-row gap-4 justify-center mb-3">
-              <a href="" className="socials-wrapper-mobile social-icon">
+              <a href={links.instagram} target="_blank" className="socials-wrapper-mobile social-icon">
                 <i className="lab la-instagram text-5xl"></i>
               </a>
-              <a href="" className="socials-wrapper-mobile social-icon">
+              <a href={links.github} target="_blank" className="socials-wrapper-mobile social-icon">
                 <i className="lab la-github text-5xl"></i>
               </a>
-              <a href="" className="socials-wrapper-mobile social-icon">
+              <a href={links.linkedin} target="_blank" className="socials-wrapper-mobile social-icon">
                 <i className="lab la-linkedin text-5xl"></i>
               </a>
             </ul>
