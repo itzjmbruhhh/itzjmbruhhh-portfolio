@@ -1,5 +1,5 @@
 import React from "react";
-import homeData from "../../public/utils/Home.json";
+import homeData from "../assets/utils/Home.json";
 
 function HomeRight() {
   return (

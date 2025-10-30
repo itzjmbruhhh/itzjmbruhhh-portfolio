@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Experience_Education.css";
-import educationData from "../../public/utils/Education.json";
+import educationData from "../assets/utils/Education.json";
 
 interface Education {
   level: String;

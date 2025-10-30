@@ -1,6 +1,6 @@
 import React from "react";
 import SkillBar from "../components/SkillBar.tsx";
-import skillsData from "../../public/utils/Skills.json";
+import skillsData from "../assets/utils/Skills.json";
 
 function Skills() {
   const { webDevelopment, machineLearning } = skillsData;

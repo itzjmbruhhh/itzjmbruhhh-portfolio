@@ -1,5 +1,5 @@
 import React from 'react';
-import certificationsData from '../../public/utils/Certifications.json';
+import certificationsData from "../assets/utils/Certifications.json";
 
 function Certifications() {
   return (

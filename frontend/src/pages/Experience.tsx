@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/Experience_Education.css";
-import expData from "../../public/utils/Experience.json";
+import expData from "../assets/utils/Experience.json";
 
 interface Experience {
   icon: string;

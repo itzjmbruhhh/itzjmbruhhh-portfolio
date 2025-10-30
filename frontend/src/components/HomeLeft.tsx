@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import homeData from "../../public/utils/Home.json";
+import homeData from "../assets/utils/Home.json";
 
 function HomeLeft() {
   const [toastVisible, setToastVisible] = useState(false);

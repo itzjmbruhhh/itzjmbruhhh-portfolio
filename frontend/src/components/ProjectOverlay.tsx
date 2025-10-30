@@ -59,7 +59,7 @@ const ProjectOverlay: React.FC<ProjectOverlayProps> = ({
           </div>
 
           {/* Title & Description */}
-          <h2 className="text-[17px] md:text-2xl xl:text-4xl font-semibold mb-1 text-(--color-gray)">
+          <h2 className="text-[17px] md:text-2xl xl:text-4xl font-semibold mb-1 text-(--color-gray) text-left">
             {project.title}
           </h2>
           <p className="text-(--color-body-2) text-[12px] xl:text-[18px]">

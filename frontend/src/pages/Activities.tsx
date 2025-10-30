@@ -1,5 +1,5 @@
 import React from "react";
-import activitiesData from "../../public/utils/Activities.json";
+import activitiesData from "../assets/utils/Activities.json";
 
 function Activities() {
   // Separate items into two arrays based on index

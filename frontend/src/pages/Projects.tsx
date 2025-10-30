@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../styles/Projects.css";
 import ProjectOverlay from "../components/ProjectOverlay";
 import ProjectCarousel from "../components/ProjectCarousel";
-import projectsData from "../../public/utils/Projects.json";
+import projectsData from "../assets/utils/Projects.json";
 
 interface Project {
   title: string;
