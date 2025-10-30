@@ -1,0 +1,10 @@
+{
+  "name": "JM Reyes",
+  "bio_1": "I'm a student developer.",
+  "bio_2": "With experience using React-Django, Tensorflow and Pytorch. Reach out if you'd like to learn more!",
+  "profession": "Web and AI Developer",
+  "location": "Lipa City, Batangas",
+  "cv_directory": "../../public/files/CV.pdf",
+  "email": "jama10292001@gmail.com",
+  "image": "../../public/images/home.jpg"
+}
