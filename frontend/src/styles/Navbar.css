@@ -76,3 +76,17 @@ html.light .theme-toggle-btn:hover {
   background: linear-gradient(135deg, #f0f0f0b7 40%, #ffffff30 60%);
   box-shadow: 0 0 12px #ff014f88; /* stronger glow on hover in light mode */
 }
+
+/* Light mode: social icon colors and hover tweaks (grayer backgrounds, stronger gray shadows) */
+html.light .social-icon {
+  background: var(--background-color-1);
+  color: var(--color-primary);
+  border-color: rgba(16, 24, 40, 0.04);
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.06);
+}
+
+html.light .social-icon:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(16, 24, 40, 0.1);
+  background: var(--background-color-1-5);
+}
