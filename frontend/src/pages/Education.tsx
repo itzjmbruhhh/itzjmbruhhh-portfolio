@@ -35,7 +35,6 @@ function Education() {
           data-aos-delay="100"
         >
           {educationData.map((educ: Education, index: number) => {
-            // Dynamically import image
             const imageSrc = new URL(`../assets/images/Education/${educ.imageSrc}`, import.meta.url).href;
 
             return (
