@@ -4,9 +4,14 @@ import homeData from "../assets/utils/Home.json";
 function HomeLeft() {
   const [toastVisible, setToastVisible] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const cvLink = new URL(
+    `../assets/files/${homeData.cv_directory}`,
+    import.meta.url
+  ).href;
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText(homeData.email)
+    navigator.clipboard
+      .writeText(homeData.email)
       .then(() => {
         setToastVisible(true);
         setTimeout(() => setToastVisible(false), 3000); // hide after 3 seconds
@@ -24,9 +29,12 @@ function HomeLeft() {
               <i className="lar la-user text-2xl border-9 p-1 rounded-full border-(--color-primary-opaque) bg-(--color-primary) text-white"></i>
             </div>
             <h1 className="mt-4 ml-1 font-extrabold text-(--color-secondary) text-2xl md:text-6xl xl:text-6xl">
-              Hi, I'm <span className="text-(--color-primary)">{homeData.name}</span>
+              Hi, I'm{" "}
+              <span className="text-(--color-primary)">{homeData.name}</span>
             </h1>
-            <p className="info-text">{homeData.bio_1} <br /> {homeData.bio_2}</p>
+            <p className="info-text">
+              {homeData.bio_1} <br /> {homeData.bio_2}
+            </p>
           </div>
 
           <div className="info-footer pt-0 p-4">
@@ -55,7 +63,7 @@ function HomeLeft() {
             <div className="flex xl:space-x-5 space-y-5 py-5 flex-col xl:flex-row xl:space-y-0 md:space-y-0 md:space-x-5 md:flex-row relative">
               <button className="box-shadow hover cv-button font-medium">
                 <a
-                  href={homeData.cv_directory}
+                  href={cvLink}
                   download
                   target="_blank"
                   rel="noopener noreferrer"
@@ -70,7 +78,6 @@ function HomeLeft() {
                 ref={buttonRef}
               >
                 CONTACT ME
-
                 {/* Inline toast positioned next to button */}
                 {toastVisible && (
                   <span className="absolute left-full ml-3 top-1/2 -translate-y-1/2 bg-black/90 text-white text-sm px-3 py-1 rounded shadow-lg whitespace-nowrap animate-fadeInOut">

@@ -6,7 +6,7 @@
         "endDate" : "Present",
         "gpa" : "GPA. 3.52 / 4.00",
         "achievements" : ["Deans Lister - 7 Times", "TOEIC Exam Score: 885", "iNUvators - Member"],
-        "imageSrc" : "../../public/images/Education/NU.png"
+        "imageSrc" : "../images/Education/NU.png"
     },
     {
         "level" : "Senior High School",
@@ -15,7 +15,7 @@
         "endDate" : "2021",
         "gpa" : "",
         "achievements" : [" Science, Technology, Engineering and Mathematics", " Graduated with High Honors and Merit Award"],
-        "imageSrc" : "../../public/images/Education/APEC.png"
+        "imageSrc" : "../images/Education/APEC.png"
     },
     {
         "level" : "High School",
@@ -24,6 +24,6 @@
         "endDate" : "2018",
         "gpa" : "",
         "achievements" : [" Graduated with Achievers", "Math Honors Society and Taekwondo Club - member"],
-        "imageSrc" : "../../public/images/Education/CA.png"
+        "imageSrc" : "../images/Education/CA.png"
     }
 ]
