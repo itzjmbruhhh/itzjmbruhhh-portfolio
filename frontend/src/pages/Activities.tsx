@@ -1,4 +1,3 @@
-import React from "react";
 import activitiesData from "../assets/utils/Activities.json";
 
 function Activities() {
