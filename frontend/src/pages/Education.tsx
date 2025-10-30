@@ -1,14 +1,14 @@
-import React from "react";
 import "../styles/Experience_Education.css";
 import educationData from "../assets/utils/Education.json";
 
 interface Education {
-  level: String;
-  school: String;
-  startYear: String;
-  endDate: String;
-  achievements: String[];
-  imageSrc: String;
+  level: string;
+  school: string;
+  startYear: string;
+  endDate: string;
+  gpa: string;
+  achievements: string[];
+  imageSrc: string;
 }
 
 function Education() {

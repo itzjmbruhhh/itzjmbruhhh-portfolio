@@ -1,4 +1,3 @@
-import React from 'react';
 import certificationsData from "../assets/utils/Certifications.json";
 
 function Certifications() {

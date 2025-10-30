@@ -1,4 +1,3 @@
-import React from "react";
 import homeData from "../assets/utils/Home.json";
 
 function HomeRight() {
