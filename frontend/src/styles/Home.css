@@ -64,3 +64,29 @@ html.light .cv-button:hover {
     0 4px 12px rgba(16, 24, 40, 0.06);
   background: var(--background-color-1-5);
 }
+
+/* Light mode: default state should have stronger side shadows (left & right) to give weight
+   and a subtle dark rim — on hover the side rim is removed and vertical lift shadows take over */
+html.light .image-container {
+  box-shadow: 0 8px 28px rgba(16, 24, 40, 0.1),
+    10px 0 24px rgba(16, 24, 40, 0.06), -10px 0 24px rgba(16, 24, 40, 0.06);
+  background: var(--background-color-1);
+}
+
+html.light .cv-button {
+  box-shadow: 0 6px 20px rgba(16, 24, 40, 0.09),
+    8px 0 20px rgba(16, 24, 40, 0.06), -8px 0 20px rgba(16, 24, 40, 0.06);
+  background: var(--background-color-1);
+}
+
+/* Dark-mode adjustments specifically for cards inside the left column (.home-left)
+   Give them a larger left/top light rim by default; on hover remove the rim to emphasize lift */
+.home-left .box-shadow {
+  box-shadow: -20px -8px 44px rgba(255, 255, 255, 0.07),
+    0 22px 48px rgba(2, 6, 23, 0.55), 0 10px 28px rgba(0, 0, 0, 0.45);
+}
+
+.home-left .box-shadow:hover {
+  /* Remove left/top light rim on hover so vertical shadow shows the lift */
+  box-shadow: 0 28px 60px rgba(2, 6, 23, 0.6), 0 12px 34px rgba(0, 0, 0, 0.48);
+}
