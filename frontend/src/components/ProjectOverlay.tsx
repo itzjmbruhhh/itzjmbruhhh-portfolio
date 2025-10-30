@@ -13,21 +13,25 @@ interface ProjectOverlayProps {
   onClose: () => void;
 }
 
-const ProjectOverlay: React.FC<ProjectOverlayProps> = ({ project, onClose }) => {
+const ProjectOverlay: React.FC<ProjectOverlayProps> = ({
+  project,
+  onClose,
+}) => {
   if (!project) return null;
 
   return (
     <div
-      className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+      className="fixed inset-0 z-50 flex items-center justify-center 
+             bg-black/80 backdrop-blur-md backdrop-saturate-150"
       onClick={onClose}
     >
       <div
-        className="bg-(--background-color-1) p-8 rounded-xl max-w-lg w-[90%] text-center relative shadow-lg"
+        className="box-shadow-proj-overlay"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
         <button
-          className="absolute top-3 right-4 text-(--color-body-2) hover:text-(--color-primary) transition-colors"
+          className="cursor-pointer absolute top-3 right-4 text-(--color-body-2) hover:text-(--color-primary) transition-colors"
           onClick={onClose}
         >
           <i className="las la-times text-2xl"></i>
@@ -37,26 +41,37 @@ const ProjectOverlay: React.FC<ProjectOverlayProps> = ({ project, onClose }) => 
         <img
           src={project.image || sample}
           alt={project.title}
-          className="rounded-lg mb-4 w-full"
+          className="rounded-lg mb-4 md:w-[300px] xl:w-[550px] w-[550px] "
         />
 
-        {/* Title & Description */}
-        <h2 className="text-2xl font-semibold mb-2 text-(--color-primary)">
-          {project.title}
-        </h2>
-        <p className="text-(--color-body-2)">{project.description}</p>
+        {/* Content Start */}
+        <div className="text-justify">
 
-        {/* Tags */}
-        <div className="mt-4">
-          {project.tags.map((tag, i) => (
-            <span
-              key={i}
-              className="inline-block bg-(--color-primary)/10 text-(--color-primary) text-sm px-3 py-1 rounded-full mr-2"
-            >
-              {tag}
-            </span>
-          ))}
+          {/* Tags */}
+          <div className="mb-2 xl:mb-4">
+            {project.tags.map((tag, i) => (
+              <span
+                key={i}
+                className="inline-block bg-(--color-primary)/10 text-(--color-primary) text-[11px] xl:text-sm px-1.5 py-0.5 rounded-full mr-2"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          {/* Title & Description */}
+          <h2 className="text-[17px] md:text-2xl xl:text-4xl font-semibold mb-1 text-(--color-gray) text-justify">
+            {project.title}
+          </h2>
+          <p className="text-(--color-body-2) text-[12px] h-[150px] xl:h-[50%] xl:text-[18px]">{project.description}</p>
+          
+          {/* Button */}
+          <div className="mt-8">
+            <a href={project.link} className="box-shadow hover cv-button font-medium">View on Github</a>
+          </div>
+          
         </div>
+        {/* Content End */}
       </div>
     </div>
   );

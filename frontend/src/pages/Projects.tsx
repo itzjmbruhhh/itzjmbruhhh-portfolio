@@ -88,7 +88,12 @@ const Projects: React.FC = () => {
         </center>
 
         {/* Carousel */}
-        <div className="mt-5 w-full relative px-3 sm:px-6 md:px-10 xl:px-30">
+        <div
+          className="mt-5 w-full relative px-3 sm:px-6 md:px-10 xl:px-30"
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-delay="1000"
+        >
           <Swiper
             slidesPerView={1}
             spaceBetween={0}
@@ -110,7 +115,7 @@ const Projects: React.FC = () => {
               <SwiperSlide key={index}>
                 <div
                   className="project-card box-shadow-proj cursor-pointer group transition-all duration-300
-          p-4 sm:p-5 md:p-6 xl:p-7 rounded-[12px]"
+          p-4 sm:p-5 md:p-6 xl:p-7 rounded-xl"
                   onClick={() => setSelectedProject(project)}
                 >
                   <div className="overflow-hidden rounded-[10px] mb-5">
@@ -122,7 +127,13 @@ const Projects: React.FC = () => {
                   </div>
 
                   <div>
-                    <span className="bio text-[14px]!">{project.tags}</span>
+                    <span className="bio text-[14px]!">
+                      {project.tags.map((tag, i) => (
+                        <span key={i} className="mr-2">
+                          {tag}
+                        </span>
+                      ))}
+                    </span>
 
                     {/* Title + icon */}
                     <h1 className="my-2 text-xl md:text-2xl font-semibold flex items-center gap-2 transition-colors duration-300 group-hover:text-(--color-primary)">

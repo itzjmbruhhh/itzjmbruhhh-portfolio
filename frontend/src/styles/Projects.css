@@ -89,3 +89,11 @@
   box-shadow: -8px -8px 14px rgba(255, 255, 255, 0.05),
     8px 8px 14px rgba(0, 0, 0, 0.35);
 }
+
+.box-shadow-proj-overlay {
+  @apply border-transparent rounded-[20px] transform w-[70%] text-center relative shadow-lg md:flex xl:flex p-10 gap-10;
+  box-shadow: -6px -6px 12px rgba(255, 255, 255, 0.10),
+    6px 6px 12px rgba(255, 255, 255, 0.10);
+  background: var(--background-color-1);
+  transition: background-color 0.6s ease-in-out, box-shadow 0.4s ease-in-out, transform 0.3s ease;
+}
