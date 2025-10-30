@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import "../styles/Projects.css";
 
 interface Project {
@@ -11,6 +12,7 @@ interface Project {
   tags: string[];
   image?: string;
   url?: string;
+  techStack?: string[];
 }
 
 interface ProjectCarouselProps {
@@ -54,18 +56,17 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
             >
               <div className="overflow-hidden rounded-[10px] mb-5">
                 <img
-                  src={project.image}
-                  alt={project.title}
-                  className="rounded-[10px] w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
-                />
+  src={project.image ? new URL(project.image, import.meta.url).href : ""}
+  alt={project.title}
+  className="rounded-[10px] w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
+/>
+
               </div>
 
               <div>
                 <span className="bio text-[14px]!">
                   {project.tags.map((tag, i) => (
-                    <span key={i} className="mr-2">
-                      {tag}
-                    </span>
+                    <span key={i} className="mr-2">{tag}</span>
                   ))}
                 </span>
 
@@ -85,7 +86,6 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
         ))}
       </Swiper>
 
-      {/* Pagination Dots */}
       <div className="custom-pagination mt-6 flex justify-center xl:hidden"></div>
     </div>
   );

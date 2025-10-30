@@ -1,12 +1,12 @@
 import React from "react";
 
 interface Project {
-  techStack: any;
   title: string;
   description: string;
   tags: string[];
   image?: string;
   url?: string;
+  techStack?: string[]; // <-- make optional
 }
 
 interface ProjectOverlayProps {

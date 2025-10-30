@@ -10,6 +10,7 @@ interface Project {
   tags: string[];
   image?: string;
   url?: string;
+  techStack?: string[]; // <-- make optional
 }
 
 const Projects: React.FC = () => {
