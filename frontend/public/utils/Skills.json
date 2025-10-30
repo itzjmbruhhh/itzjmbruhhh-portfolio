@@ -1,0 +1,18 @@
+{
+  "webDevelopment": [
+    { "skill": "React", "level": 85 },
+    { "skill": "PHP", "level": 70 },
+    { "skill": "Tailwind CSS", "level": 75 },
+    { "skill": "JavaScript", "level": 80 },
+    { "skill": "TypeScript", "level": 70 },
+    { "skill": "Node.js", "level": 75 }
+  ],
+  "machineLearning": [
+    { "skill": "Python", "level": 90 },
+    { "skill": "TensorFlow", "level": 85 },
+    { "skill": "Scikit-Learn", "level": 75 },
+    { "skill": "Data Science and Visualization", "level": 85 },
+    { "skill": "Convolutional Neural Networks", "level": 90 },
+    { "skill": "Natural Language Processing", "level": 75 }
+  ]
+}

@@ -1,0 +1,14 @@
+[
+    {
+        "title" : "IT Specialist: Python",
+        "img_path" : "../../public/images/Certifications/ITS_Python.png"
+    },
+    {
+        "title" : "IC3 Digital Literacy",
+        "img_path" : "../../public/images/Certifications/IC3_Level1.png"
+    },
+    {
+        "title" : "FreeCodeCamp - ML Python",
+        "img_path" : "../../public/images/Certifications/fcc.png"
+    }
+]
