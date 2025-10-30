@@ -13,7 +13,7 @@
 }
 
 .image-wrapper {
-    @apply relative overflow-hidden rounded-full shrink-0 w-[250px] md:w-[400px] xl:w-[25%] h-auto xl:h-[120px];
+    @apply relative overflow-hidden shrink-0 w-[370px] md:w-[400px] xl:w-[25%] h-auto xl:h-[120px];
 }
 
 .image {
