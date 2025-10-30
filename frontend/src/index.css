@@ -37,6 +37,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Light theme overrides: add `light` class to <html> to enable */
+html.light {
+  --color-primary: #ff014f;
+  --color-primary-opaque: #ff9bb3;
+  --color-secondary: #111827; /* dark text on light bg */
+  --color-tertiary: #ffffff;
+  --color-gray: #111827;
+  --color-subtitle: #d6003a;
+  --background-color-1: linear-gradient(145deg, #ffffff, #f6f7fb);
+  --background-color-2: #ffffff;
+  --color-body: #111827;
+  --color-body-2: #4b5563;
+  --color-body-3: #6b7280;
+}
+
 html {
   scroll-behavior: smooth;
 }
