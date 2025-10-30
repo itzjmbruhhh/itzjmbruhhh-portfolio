@@ -1,4 +1,5 @@
 import logo from "../assets/logo/logo.png";
+import logoLight from "../assets/logo/logo-light.png";
 import { useState, useEffect } from "react";
 import "../styles/Navbar.css";
 import NavLinks from "./NavLinks";
@@ -85,7 +86,8 @@ function Navbar() {
           <div className="flex items-center">
             <div className="logo">
               <a href="/">
-                <img src={logo} alt="logo" />
+                <img src={logo} alt="logo" className="logo-dark" />
+                <img src={logoLight} alt="logo light" className="logo-light" />
               </a>
             </div>
           </div>
@@ -114,7 +116,7 @@ function Navbar() {
 
             {/* Mobile hamburger + theme toggle (hidden xl) */}
             <div className="xl:hidden flex items-center gap-2">
-               <button
+              <button
                 onClick={() =>
                   setTheme((t) => (t === "light" ? "dark" : "light"))
                 }

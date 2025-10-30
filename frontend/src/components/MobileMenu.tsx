@@ -1,4 +1,5 @@
 import logo from "../assets/logo/logo.png";
+import logoLight from "../assets/logo/logo-light.png";
 import NavLinksMobile from "./NavLinksMobile";
 
 type MobileMenuProps = {
@@ -37,7 +38,12 @@ export default function MobileMenu({
           <div className="slider-content">
             <div className="mb-6 flex items-center justify-between">
               <a href="/">
-                <img src={logo} alt="logo" className="w-32" />
+                <img src={logo} alt="logo" className="logo-dark w-32" />
+                <img
+                  src={logoLight}
+                  alt="logo light"
+                  className="logo-light w-32"
+                />
               </a>
 
               {/* Close button placed next to the logo; minimal styling so desktop view unchanged */}

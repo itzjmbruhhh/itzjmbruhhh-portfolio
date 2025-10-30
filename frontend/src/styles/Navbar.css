@@ -90,3 +90,28 @@ html.light .social-icon:hover {
   box-shadow: 0 18px 40px rgba(16, 24, 40, 0.1);
   background: var(--background-color-1-5);
 }
+
+/* Make active nav links use --color-primary in light mode (override utility class colors) */
+html.light .nav-link[aria-current="page"] {
+  color: var(--color-primary) !important;
+}
+
+/* Ensure mobile nav active links also use primary color */
+html.light .nav-link.mobile[aria-current="page"] {
+  color: var(--color-primary) !important;
+}
+
+/* Logo swap: show dark logo by default, light logo when html.light present */
+.logo-light {
+  display: none;
+}
+.logo-dark {
+  display: inline-block;
+}
+
+html.light .logo-light {
+  display: inline-block;
+}
+html.light .logo-dark {
+  display: none;
+}
