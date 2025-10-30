@@ -49,19 +49,21 @@
 /* Make education/experience cards more '3D' by default: darker, larger shadows */
 .single-card,
 .single-card-exp {
-  box-shadow: 0 20px 50px rgba(2,6,23,0.55), 0 8px 24px rgba(0,0,0,0.45), -8px -8px 20px rgba(255,255,255,0.03);
+  box-shadow: 0 20px 50px rgba(2, 6, 23, 0.55), 0 8px 24px rgba(0, 0, 0, 0.45),
+    -8px -8px 20px rgba(255, 255, 255, 0.03);
   transition: box-shadow 0.35s ease, transform 0.25s ease, background 0.3s ease;
 }
 
 .single-card:hover,
 .single-card-exp:hover {
   transform: translateY(-8px);
-  box-shadow: 0 34px 80px rgba(2,6,23,0.65), 0 12px 36px rgba(0,0,0,0.5), -10px -10px 24px rgba(255,255,255,0.03);
+  box-shadow: 0 34px 80px rgba(2, 6, 23, 0.65), 0 12px 36px rgba(0, 0, 0, 0.5),
+    -10px -10px 24px rgba(255, 255, 255, 0.03);
 }
 
 /* Tag/span tweaks for Education section: more contrast and subtle background */
 .span {
-  border: 1px solid rgba(255,1,79,0.12); /* subtle primary tint */
+  border: 1px solid rgba(255, 1, 79, 0.12); /* subtle primary tint */
   background: var(--background-color-1-5);
   color: var(--color-primary);
   padding: 0.15rem 0.5rem;
@@ -91,4 +93,19 @@ html.light .single-card-exp:hover {
 
 html.light .image-wrapper {
   background: transparent;
+}
+
+/* Activities (timeline) — keep branch colors dark in light mode while not changing circle fill */
+html.light .activities-section .timeline-column {
+  /* Use a dark gray similar to the original tertiary color */
+  border-left-color: #0d1013 !important;
+}
+
+html.light .activities-section .branch-line {
+  background: #0d1013 !important;
+}
+
+/* Make the circle's border dark in light mode too (keep inside fill unchanged) */
+html.light .activities-section .timeline-circle {
+  border-color: #0d1013 !important;
 }
