@@ -1,0 +1,18 @@
+[
+    {
+        "icon" : "las la-desktop",
+        "title" : "Frontend Development",
+        "bio" : "I create frontend projects mainly on React! I design all of my own projects, and I try to build them one step at a time."
+    },
+    {
+        "icon" : "las la-code",
+        "title" : "Backend Development",
+        "bio" : "I create backend projects mainly on Django and Node.js! I specialize on API's and database management!"
+    },
+    {
+        "icon" : "las la-robot",
+        "title" : "Machine Learning",
+        "bio" : "I love training and making AI models. From Convolutional Neural Networks to Natural Language Processing. I use TensorFlow and PyTorch!"
+    }
+
+]
