@@ -12,8 +12,12 @@ function Navbar() {
   const [theme, setTheme] = useState<"light" | "dark">(() => {
     try {
       const stored = localStorage.getItem("theme");
-      if (stored === "light" || stored === "dark") return stored as "light" | "dark";
-      if (window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches)
+      if (stored === "light" || stored === "dark")
+        return stored as "light" | "dark";
+      if (
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: light)").matches
+      )
         return "light";
     } catch (e) {
       /* ignore */
@@ -21,7 +25,13 @@ function Navbar() {
     return "dark";
   });
 
-  const activeId = useScrollSpy(["home", "experience", "education", "resume", "projects"]);
+  const activeId = useScrollSpy([
+    "home",
+    "experience",
+    "education",
+    "resume",
+    "projects",
+  ]);
 
   // Scroll effect
   useEffect(() => {
@@ -71,7 +81,6 @@ function Navbar() {
       >
         {/* Header Wrapper */}
         <div className="header-wrapper flex items-center justify-between xl:px-4 py-3 px-0 md:px-14">
-
           {/* Left: Logo */}
           <div className="flex items-center">
             <div className="logo">
@@ -83,38 +92,56 @@ function Navbar() {
 
           {/* Right: Desktop nav + theme toggle / Mobile hamburger */}
           <div className="flex items-center gap-4">
-
             {/* Desktop nav + theme toggle (xl+) */}
             <div className="hidden xl:flex items-center gap-4">
               <nav className="header-right">
                 <NavLinks activeId={activeId} />
               </nav>
               <button
-                onClick={() => setTheme((t) => (t === "light" ? "dark" : "light"))}
+                onClick={() =>
+                  setTheme((t) => (t === "light" ? "dark" : "light"))
+                }
                 aria-label="Toggle theme"
-                className="p-2 rounded focus:outline-none hover:opacity-90 text-(--color-body-2)"
+                className="theme-toggle-btn text-(--color-body-2)"
               >
-                <i className={`${theme === "light" ? "las la-sun" : "las la-moon"} text-xl`}></i>
+                <i
+                  className={`${
+                    theme === "light" ? "las la-sun" : "las la-moon"
+                  } text-3xl`}
+                ></i>
               </button>
             </div>
 
             {/* Mobile hamburger + theme toggle (hidden xl) */}
             <div className="xl:hidden flex items-center gap-2">
               <button
-                onClick={() => setTheme((t) => (t === "light" ? "dark" : "light"))}
+                onClick={() =>
+                  setTheme((t) => (t === "light" ? "dark" : "light"))
+                }
                 aria-label="Toggle theme"
                 className="p-2 rounded focus:outline-none hover:opacity-90 text-(--color-body-2)"
               >
-                <i className={`${theme === "light" ? "las la-sun" : "las la-moon"} text-lg`}></i>
+                <i
+                  className={`${
+                    theme === "light" ? "las la-sun" : "las la-moon"
+                  } text-lg`}
+                ></i>
               </button>
-              <Hamburger open={menuOpen} onToggle={() => setMenuOpen((s) => !s)} />
+              <Hamburger
+                open={menuOpen}
+                onToggle={() => setMenuOpen((s) => !s)}
+              />
             </div>
           </div>
         </div>
       </header>
 
       {/* Mobile menu */}
-      <MobileMenu open={menuOpen} onClose={() => setMenuOpen(false)} activeId={activeId} />
+      <MobileMenu
+        open={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        activeId={activeId}
+      />
     </>
   );
 }

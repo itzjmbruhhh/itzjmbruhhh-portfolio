@@ -43,12 +43,36 @@
   }
 
   .social-icon {
-  @apply border border-transparent rounded-[10px] w-fit p-2 transition-all duration-300 ease-in-out transform;
-  background: linear-gradient(135deg, #25292e 30%, #2f3236b7 70%);
+    @apply border border-transparent rounded-[10px] w-fit p-2 transition-all duration-300 ease-in-out transform;
+    background: linear-gradient(135deg, #25292e 30%, #2f3236b7 70%);
+  }
+
+  .social-icon:hover {
+    @apply -translate-y-2 shadow-lg;
+    background: linear-gradient(135deg, #2f3236b7 40%, #25292e 60%);
+  }
 }
 
-.social-icon:hover {
+/* Navbar.css */
+.theme-toggle-btn {
+  @apply border border-transparent rounded-[10px] w-fit p-2 transition-all duration-300 ease-in-out transform flex items-center justify-center;
+  background: linear-gradient(135deg, #25292e 30%, #2f3236b7 70%);
+  box-shadow: 0 0 20px #ff014f33; /* subtle glow in dark mode */
+}
+
+.theme-toggle-btn:hover {
   @apply -translate-y-2 shadow-lg;
   background: linear-gradient(135deg, #2f3236b7 40%, #25292e 60%);
+  box-shadow: 0 0 12px #ff014f88; /* stronger glow on hover */
 }
+
+/* Dark mode override using the 'light' class on html */
+html.light .theme-toggle-btn {
+  background: linear-gradient(135deg, #ffffff30 30%, #f0f0f0b7 70%);
+  box-shadow: 0 0 20px #ff014f33; /* glow for light mode */
+}
+
+html.light .theme-toggle-btn:hover {
+  background: linear-gradient(135deg, #f0f0f0b7 40%, #ffffff30 60%);
+  box-shadow: 0 0 12px #ff014f88; /* stronger glow on hover in light mode */
 }
