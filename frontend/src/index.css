@@ -14,6 +14,8 @@
   --background-color-1-5: linear-gradient(-145deg, #1e2024, #23272b);
   --background-color-1-5-2: linear-gradient(-145deg, #141618, #23272b);
   --background-color-2: #212428;
+  /* progress bar unfilled background (darker in dark mode) */
+  --progress-bg: #131418;
   --color-body: #878e99;
   --color-body-2: #878e9979;
   --color-body-3: #bbbec4;
@@ -53,6 +55,8 @@ html.light {
   --color-body: #111827;
   --color-body-2: #4b5563;
   --color-body-3: #6b7280;
+  /* progress bar unfilled background in light mode */
+  --progress-bg: #f3f4f6;
 }
 
 html {

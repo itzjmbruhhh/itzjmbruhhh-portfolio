@@ -28,7 +28,7 @@ const SkillBar: React.FC<SkillBarProps> = ({ skill, level }) => {
       {/* Progress bar container (unfilled uses CSS variable for background) */}
       <div
         className="relative w-full h-2 rounded-full overflow-hidden shadow-[inset_2px_2px_4px_rgba(0,0,0,0.2)]"
-        style={{ background: "var(--background-color-2)" }}
+        style={{ background: "var(--progress-bg)" }}
       >
         {/* Animated filled portion — uses CSS gradient via inline style to ensure variables resolve */}
         <div
