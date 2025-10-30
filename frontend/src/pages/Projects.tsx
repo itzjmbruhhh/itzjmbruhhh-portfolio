@@ -2,50 +2,24 @@ import React, { useState } from "react";
 import "../styles/Projects.css";
 import ProjectOverlay from "../components/ProjectOverlay";
 import ProjectCarousel from "../components/ProjectCarousel";
+import projectsData from "../../public/utils/Projects.json";
 
 interface Project {
   title: string;
   description: string;
   tags: string[];
   image?: string;
+  url?: string;
 }
 
 const Projects: React.FC = () => {
   const [activeTab, setActiveTab] = useState("All");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const projects: Project[] = [
-    {
-      title: "Portfolio Website",
-      description: "A personal portfolio built with React and Tailwind CSS.",
-      tags: ["Web"],
-    },
-    {
-      title: "Coffee Tracker App",
-      description: "A cross-platform coffee tracker built with React Native.",
-      tags: ["Mobile", "Web"],
-    },
-    {
-      title: "E-commerce Platform",
-      description: "Full-stack platform for online sales.",
-      tags: ["Web"],
-    },
-    {
-      title: "IoT Dashboard",
-      description: "A responsive dashboard for IoT devices.",
-      tags: ["Web", "Mobile"],
-    },
-    {
-      title: "ML Model Deployer",
-      description: "A web-based interface for deploying ML models.",
-      tags: ["Web"],
-    },
-  ];
-
   const filteredProjects =
     activeTab === "All"
-      ? projects
-      : projects.filter((project) => project.tags.includes(activeTab));
+      ? projectsData
+      : projectsData.filter((project) => project.tags.includes(activeTab));
 
   return (
     <section
@@ -83,7 +57,7 @@ const Projects: React.FC = () => {
           </ul>
         </center>
 
-        {/* Carousel Component */}
+        {/* Carousel */}
         <ProjectCarousel
           projects={filteredProjects}
           onProjectSelect={setSelectedProject}

@@ -1,11 +1,11 @@
 import React from "react";
-import sample from "../assets/projects/1.png";
 
 interface Project {
   title: string;
   description: string;
   tags: string[];
   image?: string;
+  url?: string;
 }
 
 interface ProjectOverlayProps {
@@ -26,7 +26,7 @@ const ProjectOverlay: React.FC<ProjectOverlayProps> = ({
       onClick={onClose}
     >
       <div
-        className="box-shadow-proj-overlay"
+        className="box-shadow-proj-overlay relative p-6 md:p-10 bg-(--background-color-2) rounded-xl"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close Button */}
@@ -39,14 +39,13 @@ const ProjectOverlay: React.FC<ProjectOverlayProps> = ({
 
         {/* Project Image */}
         <img
-          src={project.image || sample}
+          src={project.image}
           alt={project.title}
-          className="rounded-lg mb-4 md:w-[300px] xl:w-[550px] w-[550px] "
+          className="rounded-lg mb-4 md:w-[300px] xl:w-[550px] w-full object-contain"
         />
 
-        {/* Content Start */}
+        {/* Content */}
         <div className="text-justify">
-
           {/* Tags */}
           <div className="mb-2 xl:mb-4">
             {project.tags.map((tag, i) => (
@@ -60,18 +59,27 @@ const ProjectOverlay: React.FC<ProjectOverlayProps> = ({
           </div>
 
           {/* Title & Description */}
-          <h2 className="text-[17px] md:text-2xl xl:text-4xl font-semibold mb-1 text-(--color-gray) text-justify">
+          <h2 className="text-[17px] md:text-2xl xl:text-4xl font-semibold mb-1 text-(--color-gray)">
             {project.title}
           </h2>
-          <p className="text-(--color-body-2) text-[12px] h-[150px] xl:h-[50%] xl:text-[18px]">{project.description}</p>
-          
-          {/* Button */}
-          <div className="mt-8">
-            <a href={project.link} className="box-shadow hover cv-button font-medium">View on Github</a>
-          </div>
-          
+          <p className="text-(--color-body-2) text-[12px] xl:text-[18px]">
+            {project.description}
+          </p>
+
+          {/* GitHub Button */}
+          {project.url && (
+            <div className="mt-8">
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="box-shadow hover cv-button font-medium"
+              >
+                View on GitHub
+              </a>
+            </div>
+          )}
         </div>
-        {/* Content End */}
       </div>
     </div>
   );

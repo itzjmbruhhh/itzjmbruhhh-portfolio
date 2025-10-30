@@ -1,8 +1,6 @@
-// src/components/ProjectCarousel.tsx
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-import sample from "../assets/projects/1.png";
 import "swiper/css";
 import "swiper/css/navigation";
 import "../styles/Projects.css";
@@ -12,6 +10,7 @@ interface Project {
   description: string;
   tags: string[];
   image?: string;
+  url?: string;
 }
 
 interface ProjectCarouselProps {
@@ -50,13 +49,12 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
         {projects.map((project, index) => (
           <SwiperSlide key={index}>
             <div
-              className="project-card box-shadow-proj cursor-pointer group transition-all duration-300
-              p-4 sm:p-5 md:p-6 xl:p-7 rounded-xl"
+              className="project-card box-shadow-proj cursor-pointer group transition-all duration-300 p-4 sm:p-5 md:p-6 xl:p-7 rounded-xl"
               onClick={() => onProjectSelect(project)}
             >
               <div className="overflow-hidden rounded-[10px] mb-5">
                 <img
-                  src={sample}
+                  src={project.image}
                   alt={project.title}
                   className="rounded-[10px] w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
                 />
@@ -87,7 +85,7 @@ const ProjectCarousel: React.FC<ProjectCarouselProps> = ({
         ))}
       </Swiper>
 
-      {/* Pagination Dots (only visible on small screens) */}
+      {/* Pagination Dots */}
       <div className="custom-pagination mt-6 flex justify-center xl:hidden"></div>
     </div>
   );
