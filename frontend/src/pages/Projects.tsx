@@ -52,7 +52,10 @@ const Projects: React.FC = () => {
       : projects.filter((project) => project.tags.includes(activeTab));
 
   return (
-    <section id="projects" className="scroll-mt-[180px]">
+    <section
+      id="projects"
+      className="scroll-mt-[110px] md:scroll-mt-[120px] xl:scroll-mt-[120px]"
+    >
       <div className="wrapper flex flex-col gap-10">
         {/* Section Heading */}
         <div className="xl:mb-5" data-aos="fade-up" data-aos-duration="500">
@@ -85,63 +88,62 @@ const Projects: React.FC = () => {
         </center>
 
         {/* Carousel */}
-<div className="mt-5 w-full relative px-4 sm:px-6 md:px-8 xl:px-30">
-  <Swiper
-    slidesPerView={1}
-    spaceBetween={16}
-    loop={true}
-    navigation={true}
-    pagination={{
-      clickable: true,
-      el: ".custom-pagination",
-    }}
-    modules={[Navigation, Pagination]}
-    breakpoints={{
-      640: { slidesPerView: 1, spaceBetween: 20 },   // small
-      768: { slidesPerView: 2, spaceBetween: 25 },   // medium
-      1280: { slidesPerView: 3, spaceBetween: 30 },  // xl (unchanged)
-    }}
-    className="custom-swiper"
-  >
-    {filteredProjects.map((project, index) => (
-      <SwiperSlide key={index}>
-        <div
-          className="project-card box-shadow-proj cursor-pointer group transition-all duration-300"
-          onClick={() => setSelectedProject(project)}
-        >
-          <div>
-            <img
-              src={sample}
-              alt="photo"
-              className="rounded-[10px] mb-5 transition-transform duration-500 group-hover:scale-[1.02]"
-            />
-          </div>
+        <div className="mt-5 w-full relative px-3 sm:px-6 md:px-10 xl:px-30">
+          <Swiper
+            slidesPerView={1}
+            spaceBetween={0}
+            loop={true}
+            navigation={true}
+            pagination={{
+              clickable: true,
+              el: ".custom-pagination",
+            }}
+            modules={[Navigation, Pagination]}
+            breakpoints={{
+              640: { slidesPerView: 1, spaceBetween: 20 }, // small
+              768: { slidesPerView: 2, spaceBetween: 25 }, // medium
+              1280: { slidesPerView: 3, spaceBetween: 30 }, // xl (unchanged)
+            }}
+            className="custom-swiper"
+          >
+            {filteredProjects.map((project, index) => (
+              <SwiperSlide key={index}>
+                <div
+                  className="project-card box-shadow-proj cursor-pointer group transition-all duration-300
+          p-4 sm:p-5 md:p-6 xl:p-7 rounded-[12px]"
+                  onClick={() => setSelectedProject(project)}
+                >
+                  <div className="overflow-hidden rounded-[10px] mb-5">
+                    <img
+                      src={sample}
+                      alt="photo"
+                      className="rounded-[10px] w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
+                    />
+                  </div>
 
-          <div>
-            <span className="bio text-[14px]!">{project.tags}</span>
+                  <div>
+                    <span className="bio text-[14px]!">{project.tags}</span>
 
-            {/* Title + icon */}
-            <h1 className="my-2 text-2xl font-semibold flex items-center gap-2 transition-colors duration-300 group-hover:text-(--color-primary)">
-              {project.title}
-              <span className="opacity-0 transition-all duration-300 group-hover:opacity-100 text-(--color-primary)">
-                <i className="las la-arrow-right text-2xl"></i>
-              </span>
-            </h1>
+                    {/* Title + icon */}
+                    <h1 className="my-2 text-xl md:text-2xl font-semibold flex items-center gap-2 transition-colors duration-300 group-hover:text-(--color-primary)">
+                      {project.title}
+                      <span className="opacity-0 transition-all duration-300 group-hover:opacity-100 text-(--color-primary)">
+                        <i className="las la-arrow-right text-2xl"></i>
+                      </span>
+                    </h1>
 
-            <p className="text-(--color-body-2)">
-              {project.description}
-            </p>
-          </div>
+                    <p className="text-(--color-body-2) text-[15px] md:text-[16px]">
+                      {project.description}
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Pagination Dots (only visible on small screens) */}
+          <div className="custom-pagination mt-6 flex justify-center xl:hidden"></div>
         </div>
-      </SwiperSlide>
-    ))}
-  </Swiper>
-
-  {/* Pagination Dots (only visible on small screens) */}
-  <div className="custom-pagination mt-6 flex justify-center xl:hidden"></div>
-</div>
-
-
 
         {/* Overlay Component */}
         <ProjectOverlay
