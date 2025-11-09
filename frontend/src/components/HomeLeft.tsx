@@ -20,7 +20,7 @@ function HomeLeft() {
   };
 
   return (
-    <div className="home-left info-container hover">
+    <div className="home-left info-container">
       <div className="info-wrapper">
         <div className="info-bio m-0.5 box-shadow">
           {/* Info Header */}
