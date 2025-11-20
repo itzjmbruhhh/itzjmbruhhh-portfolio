@@ -46,6 +46,16 @@
   @apply text-[18px] xl:text-3xl font-medium xl:font-semibold;
 }
 
+/* GitHub stats row used in the Experience section */
+.github-stats {
+  @apply flex gap-4 flex-wrap justify-center items-stretch pb-4 px-4;
+}
+
+.github-stat {
+  @apply rounded-xl min-w-[150px] flex flex-col justify-center items-center p-4 text-center;
+  background: var(--background-color-2);
+}
+
 /* Make education/experience cards more '3D' by default: darker, larger shadows */
 .single-card,
 .single-card-exp {
