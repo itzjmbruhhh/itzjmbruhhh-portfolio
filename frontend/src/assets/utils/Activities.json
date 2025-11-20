@@ -1,22 +1,22 @@
 [
-    {
-        "title" : "CHED LAKAS",
-        "bio" : "National University Lipa, October 25, 2023",
-        "description" : "A local conference held at our school by the Commission on Higher Education (CHED) , brought together computing educators, researchers, and professionals from the Philippines. During the event, we were introduced to topics in natural language processing and other machine learning techniques. This was an especially valuable experience during my first year of college, providing early exposure to advanced computing concepts."
-    },
-    {
-        "title" : "APPCON 2023",
-        "bio" : "National University Lipa, Oct. 2023 – April 2024",
-        "description" : "At APPCON 2023, we developed ‘LAYA’ to represent National University Lipa. LAYA is a multilingual conversational AI for Philippine law, designed to assist users with legal inquiries. The project involved data collection, natural language preprocessing, and model training to provide automated legal assistance, demonstrating both practical AI applications and innovative problem-solving in the context of social issues in the Philippines."
-    },
-    {
-        "title" : "24th Philippine Computing Science Congress",
-        "bio" : "De La Salle Laguna, May 9-11, 2024",
-        "description" : "Organized by the Computing Society of the Philippines to enable local and neighboring computing educators, researchers, information and communications technology (ICT) professionals, and students to interact and share their work in computing, computer science, computational science, and ICT."
-    },
-    {
-        "title" : "Base Build Calabarzon",
-        "bio" : "National University Lipa, September 10, 2025",
-        "description" : "A one-day seminar on blockchain development hosted by BaseBuild, where participants engaged in hands-on learning, collaborative activities, and practical on-chain project creation. The event provided a comprehensive introduction to blockchain concepts and guided us through real-world applications, offering valuable practical experience in the field."
-    }
+  {
+    "title": "CHED LAKAS",
+    "bio": "National University Lipa, October 25, 2023",
+    "description": "A local conference held at our school by the Commission on Higher Education (CHED) , brought together computing educators, researchers, and professionals from the Philippines. During the event, we were introduced to topics in natural language processing and other machine learning techniques. This was an especially valuable experience during my first year of college, providing early exposure to advanced computing concepts."
+  },
+  {
+    "title": "APPCON 2023",
+    "bio": "National University Lipa, Oct. 2023 – April 2024",
+    "description": "At APPCON 2023, we developed ‘LAYA’ to represent National University Lipa. LAYA is a multilingual conversational AI for Philippine law, designed to assist users with legal inquiries. The project involved data collection, natural language preprocessing, and model training to provide automated legal assistance, demonstrating both practical AI applications and innovative problem-solving in the context of social issues in the Philippines."
+  },
+  {
+    "title": "24th Philippine Computing Science Congress",
+    "bio": "De La Salle Laguna, May 9-11, 2024",
+    "description": "Organized by the Computing Society of the Philippines to enable local and neighboring computing educators, researchers, information and communications technology (ICT) professionals, and students to interact and share their work in computing, computer science, computational science, and ICT."
+  },
+  {
+    "title": "Base Build Calabarzon",
+    "bio": "National University Lipa, September 10, 2025",
+    "description": "I won 3rd place for creating 'ArcadeHub' in the hackathon that took place. A one-day seminar on blockchain development hosted by BaseBuild, where participants engaged in hands-on learning, collaborative activities, and practical on-chain project creation. The event provided a comprehensive introduction to blockchain concepts and guided us through real-world applications, offering valuable practical experience in the field."
+  }
 ]

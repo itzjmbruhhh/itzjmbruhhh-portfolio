@@ -30,5 +30,21 @@
     "tags": ["Web"],
     "techStack": ["PHP", "HTML", "CSS", "JavaScript", "Tensorflow"],
     "url": "https://github.com/itzjmbruhhh/coffee_leaf_diseases_classifier"
+  },
+  {
+    "title": "ArcadeHub",
+    "description": "Your ultimate destination for pixel-perfect mini games. 3rd place winner of Base Build Hackathon 2025",
+    "image": "5.png",
+    "tags": ["Web"],
+    "techStack": ["HTML", "CSS", "JavaScript", "React", "OharaAI"],
+    "url": "https://ohara.ai/mini-apps/dbe753f9-968c-42a9-87c5-6489a630345e"
+  },
+  {
+    "title": "AI-Powered Admission System - NU Lipa",
+    "description": "A Django-based student admission system for NU Lipa, allowing student registration, admin management, and future ML integration for processing applications.",
+    "image": "6.png",
+    "tags": ["Web"],
+    "techStack": ["HTML", "CSS", "JavaScript", "Django", "Python", "Tensorflow"],
+    "url": "https://github.com/itzjmbruhhh/NU_Admission"
   }
 ]
