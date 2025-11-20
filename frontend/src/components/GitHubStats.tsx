@@ -32,6 +32,8 @@ export default function GitHubStats() {
   useEffect(() => {
     let mounted = true;
 
+    repos
+
     async function load() {
       try {
         setLoading(true);
