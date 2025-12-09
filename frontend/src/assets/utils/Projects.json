@@ -46,5 +46,13 @@
     "tags": ["Web"],
     "techStack": ["HTML", "CSS", "JavaScript", "Django", "Python", "Tensorflow"],
     "url": "https://github.com/itzjmbruhhh/NU_Admission"
+  },
+  {
+    "title": "Peek-A-Book",
+    "description": "Peek-A-Book is a small side project I built to experiment with computer vision. Take a photo of your bookshelf and the app will try to recognize the books, pull in useful details and suggest matches based on your reading preferences.",
+    "image": "7.png",
+    "tags": ["All", "Web", "Mobile"],
+    "techStack": ["React", "Django", "Python", "Tailwind", "TypeScript"],
+    "url": "https://github.com/itzjmbruhhh/Peek-A-Book"
   }
 ]
