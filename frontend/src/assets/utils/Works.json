@@ -1,0 +1,12 @@
+[
+  {
+    "company": "JLabs",
+    "role": "Full Stack Intern",
+    "type": "Internship",
+    "period": "March 2026 — Present",
+    "location": "Remote",
+    "description": "Building and maintaining scalable web applications using React and TypeScript. Collaborated closely with design and backend teams to ship new product features.",
+    "stack": ["React", "Node.js", "JavaScript"],
+    "current": true
+  }
+]

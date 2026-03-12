@@ -179,6 +179,18 @@ html.light .github-stat:hover {
   border: 1px solid rgba(245, 158, 11, 0.25);
 }
 
+.work-type-badge--internship {
+  color: #a78bfa;
+  background: rgba(167, 139, 250, 0.1);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+}
+
+.work-type-badge--part-time {
+  color: #fb923c;
+  background: rgba(251, 146, 60, 0.1);
+  border: 1px solid rgba(251, 146, 60, 0.25);
+}
+
 /* Right column: card */
 .work-card {
   @apply flex-1 rounded-2xl p-5 xl:p-7 flex flex-col gap-3;

@@ -66,7 +66,7 @@ function Experience() {
               data-aos-duration="500"
               data-aos-delay={String(statsDelay)}
           >
-            <h3 className="text-xl xl:text-2xl font-medium text-(--color-primary) mb-4">
+            <h3 className="text-xl xl:text-2xl text-center font-medium text-(--color-primary) mb-4">
               GitHub Stats
             </h3>
             <GitHubStats />
@@ -81,7 +81,7 @@ function Experience() {
           >
             <div className="xl:mb-5" data-aos="fade-up" data-aos-duration="500">
               <h3 className="bio">Where I've worked?</h3>
-              <h1 className="heading flex justify-center">My Work</h1>
+              <h1 className="heading flex justify-center">Companies</h1>
             </div>
 
             <div className="works-list">
