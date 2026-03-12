@@ -18,6 +18,7 @@ interface Work {
   description: string;
   stack: string[];
   current?: boolean;
+  link?: string;
 }
 
 function Experience() {
@@ -108,7 +109,18 @@ function Experience() {
                       )}
                       <div className="work-header">
                         <h3 className="work-role">{work.role}</h3>
-                        <span className="work-company">@ {work.company}</span>
+                        {work.link ? (
+                            <a
+                                href={work.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="work-company work-company--link"
+                            >
+                              @ {work.company}
+                            </a>
+                        ) : (
+                            <span className="work-company">@ {work.company}</span>
+                        )}
                       </div>
                       <div className="work-location">
                         <i className="bx bx-map-pin text-sm" />
