@@ -19,9 +19,9 @@
     "title": "NPK Deficiency Detector in Bitter Gourd Leaves",
     "description": "A Deep Learning CNN Model focused on distinguishing between Healthy, Nitrogen, Phosphorus and Potassium Deficient Bitter Gourd Plants.",
     "image": "3.png",
-    "tags": ["All", "Web"],
-    "techStack": ["Django", "React", "Tensorflow"],
-    "url": "https://github.com/itzjmbruhhh/NPK_Deficiency_Classifier_IoT"
+    "tags": ["All", "Web", "Mobile"],
+    "techStack": ["Flask", "React", "Tensorflow", "GCP"],
+    "url": "https://npknows.vercel.app/"
   },
   {
     "title": "Leaf It Up to Me",
