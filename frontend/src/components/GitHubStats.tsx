@@ -32,14 +32,11 @@ export default function GitHubStats() {
   useEffect(() => {
     let mounted = true;
 
-    repos
-
     async function load() {
       try {
         setLoading(true);
         setError(null);
 
-        // 1) fetch user and repos
         const [userRes, reposRes] = await Promise.all([
           fetch(`https://api.github.com/users/${username}`),
           fetch(`https://api.github.com/users/${username}/repos?per_page=100`),
@@ -55,9 +52,7 @@ export default function GitHubStats() {
 
         setUser(userJson as GhUser);
         setRepos(reposJson as Repo[]);
-        // 2) Try to get overall commit contributions since account creation via GitHub GraphQL
-        //    This requires a token set as VITE_GITHUB_TOKEN. If token is missing or the
-        //    request fails, fall back to summing per-repo contributor counts (best-effort).
+
         const token = (import.meta as any)?.env?.VITE_GITHUB_TOKEN || null;
 
         if (token) {
@@ -79,25 +74,22 @@ export default function GitHubStats() {
             if (gRes.ok) {
               const gJson = await gRes.json();
               const total =
-                gJson?.data?.user?.contributionsCollection
-                  ?.totalCommitContributions;
+                  gJson?.data?.user?.contributionsCollection
+                      ?.totalCommitContributions;
               if (typeof total === "number") {
                 if (mounted) setCommitCount(total);
                 return;
               }
             }
-            // if GraphQL didn't return the value, fall through to contributors-sum fallback
           } catch (e) {
             // ignore and fallback
           }
         }
 
-        // Fallback: compute commits by querying contributors per repo (sums contributions for this user)
-        // Note: this uses the unauthenticated API and may be rate-limited. We gracefully skip failures.
         const commitPromises = reposJson.map(async (r) => {
           try {
             const cRes = await fetch(
-              `https://api.github.com/repos/${username}/${r.name}/contributors?per_page=100`
+                `https://api.github.com/repos/${username}/${r.name}/contributors?per_page=100`
             );
             if (!cRes.ok) return 0;
             const cJson = await cRes.json();
@@ -129,59 +121,74 @@ export default function GitHubStats() {
     };
   }, []);
 
-  // placeholder: if needed later, totalStars can be computed from repos
+  if (loading) {
+    return (
+        <div className="github-stats">
+          <div className="box-shadow github-stat">Loading GitHub...</div>
+        </div>
+    );
+  }
+
+  if (error) {
+    return (
+        <div className="github-stats">
+          <div className="box-shadow github-stat">Error: {error}</div>
+        </div>
+    );
+  }
+
+  const statItems = [
+    {
+      label: "Repos",
+      value: formatNumber(user?.public_repos || 0),
+      icon: "bx bx-book-bookmark",
+    },
+    {
+      label: "Commits",
+      value: commitCount !== null ? formatNumber(commitCount) : "—",
+      icon: "bx bx-git-commit",
+    },
+    {
+      label: "Followers",
+      value: formatNumber(user?.followers || 0),
+      icon: "bx bx-user-check",
+    },
+    {
+      label: "Following",
+      value: formatNumber(user?.following || 0),
+      icon: "bx bx-user-plus",
+    },
+  ];
 
   return (
-    <div className="github-stats" data-aos="fade-up" data-aos-duration="600">
-      {loading ? (
-        <div className="box-shadow github-stat p-4">Loading GitHub...</div>
-      ) : error ? (
-        <div className="box-shadow github-stat p-4">Error: {error}</div>
-      ) : (
-        <>
-          <a
+      <div className="github-stats">
+        {/* Profile card */}
+        <a
             href={user?.html_url}
             target="_blank"
             rel="noopener noreferrer"
-            className="box-shadow github-stat p-4 no-underline"
-          >
-            <div className="flex items-center gap-3 justify-center">
-              <img
-                src={user?.avatar_url}
-                alt={user?.login}
-                className="rounded-full w-12 h-12"
-              />
-              <div>
-                <div className="text-[16px] font-bold">@{user?.login}</div>
-                <div className="text-[13px] text-(--color-body-2)">
-                  View profile
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <div className="box-shadow github-stat p-4">
-            <div className="font-bold text-xl">Repos</div>
-            <div className="text-(--color-body-2) text-lg">
-              {formatNumber(user?.public_repos || 0)}
-            </div>
+            className="box-shadow github-stat no-underline"
+            style={{ minWidth: 180 }}
+        >
+          <img
+              src={user?.avatar_url}
+              alt={user?.login}
+              className="rounded-full w-12 h-12 mb-2"
+          />
+          <div className="font-bold text-[15px]">@{user?.login}</div>
+          <div className="text-[12px] text-(--color-body-2) flex items-center gap-1 mt-0.5">
+            <i className="bx bxl-github text-base" /> View profile
           </div>
+        </a>
 
-          <div className="box-shadow github-stat p-4">
-            <div className="font-bold text-xl">Overall commits</div>
-            <div className="text-(--color-body-2) text-lg">
-              {commitCount !== null ? formatNumber(commitCount) : "—"}
+        {/* Stat tiles */}
+        {statItems.map((s) => (
+            <div key={s.label} className="box-shadow github-stat">
+              <i className={`${s.icon} text-(--color-primary) text-2xl mb-1`} />
+              <div className="font-bold text-xl">{s.value}</div>
+              <div className="text-[13px] text-(--color-body-2)">{s.label}</div>
             </div>
-          </div>
-
-          <div className="box-shadow github-stat p-4">
-            <div className="font-bold text-xl">Followers</div>
-            <div className="text-(--color-body-2) text-lg">
-              {formatNumber(user?.followers || 0)}
-            </div>
-          </div>
-        </>
-      )}
-    </div>
+        ))}
+      </div>
   );
 }

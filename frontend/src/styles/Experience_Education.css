@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+/* ─────────────────────────────────────────────────────────────
+   EXISTING EDUCATION CARDS (unchanged)
+───────────────────────────────────────────────────────────── */
+
 .card-container {
   @apply flex flex-col gap-5 xl:flex-row xl:justify-center xl:gap-8;
 }
@@ -32,10 +36,41 @@
   @apply text-[18px] xl:text-2xl font-medium xl:font-semibold;
 }
 
-/* experience */
+/* ─────────────────────────────────────────────────────────────
+   BENTO GRID — Experience cards + GitHub stats
+───────────────────────────────────────────────────────────── */
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 1280px) {
+  .bento-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+}
+
+.bento-card {
+  @apply rounded-2xl px-5 pb-4 xl:py-10 xl:px-8 mx-5 xl:mx-0;
+  background: var(--background-color-2);
+  transition: box-shadow 0.35s ease, transform 0.25s ease, background 0.3s ease;
+}
+
+.bento-card-inner {
+  @apply flex flex-col h-full;
+}
+
+/* ─────────────────────────────────────────────────────────────
+   EXPERIENCE CARD INTERNALS (kept from original)
+───────────────────────────────────────────────────────────── */
 
 .single-card-exp {
-  @apply px-5 pb-4 xl:w-[26%] flex flex-col gap-4 xl:max-w-[26%] xl:py-12 xl:px-8 xl:pt-8 mx-5 xl:mx-0;
+  /* size/padding now driven by .bento-card */
+  @apply flex flex-col gap-4;
 }
 
 .info-wrapper-exp {
@@ -46,35 +81,191 @@
   @apply text-[18px] xl:text-3xl font-medium xl:font-semibold;
 }
 
-/* GitHub stats row used in the Experience section */
+/* ─────────────────────────────────────────────────────────────
+   GITHUB STATS — standalone grid (no parent card wrapper)
+───────────────────────────────────────────────────────────── */
+
+.github-stats-section {
+  @apply mx-5 xl:mx-0;
+}
+
 .github-stats {
-  @apply flex gap-4 flex-wrap justify-center items-stretch pb-4 px-4;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+@media (max-width: 1279px) {
+  .github-stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .github-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .github-stat {
-  @apply rounded-xl min-w-[150px] flex flex-col justify-center items-center p-4 text-center;
+  @apply rounded-2xl flex flex-col justify-center items-center p-5 text-center;
   background: var(--background-color-2);
-}
-
-/* Make education/experience cards more '3D' by default: darker, larger shadows */
-.single-card,
-.single-card-exp {
-  /* Dark mode: larger, softer left/top light to give a subtle rim on the left, with deeper bottom-right shadows */
+  min-height: 120px;
   box-shadow: -18px -6px 40px rgba(255, 255, 255, 0.06),
-    0 20px 50px rgba(2, 6, 23, 0.55), 0 8px 24px rgba(0, 0, 0, 0.45);
-  transition: box-shadow 0.35s ease, transform 0.25s ease, background 0.3s ease;
+  0 20px 50px rgba(2, 6, 23, 0.55), 0 8px 24px rgba(0, 0, 0, 0.45);
+  transition: box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+  transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+  background 0.3s ease;
 }
 
-.single-card:hover,
-.single-card-exp:hover {
-  transform: translateY(-8px);
-  /* On hover remove the left/top light highlight so the darker, floating shadow is emphasized */
+.github-stat:hover {
+  transform: translateY(-6px);
   box-shadow: 0 34px 80px rgba(2, 6, 23, 0.65), 0 12px 36px rgba(0, 0, 0, 0.5);
 }
 
-/* Tag/span tweaks for Education section: more contrast and subtle background */
+html.light .github-stat {
+  background: var(--background-color-1);
+  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.1),
+  10px 0 28px rgba(16, 24, 40, 0.06), -10px 0 28px rgba(16, 24, 40, 0.06);
+}
+
+html.light .github-stat:hover {
+  box-shadow: 0 18px 40px rgba(16, 24, 40, 0.1), 0 6px 18px rgba(16, 24, 40, 0.07);
+  background: var(--background-color-1-5);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   WORK HISTORY — vertical list with left meta column
+───────────────────────────────────────────────────────────── */
+
+.works-list {
+  @apply flex flex-col gap-5 mx-5 xl:mx-0;
+}
+
+.work-item {
+  @apply flex flex-col xl:flex-row gap-4 xl:gap-8;
+}
+
+/* Left column: period + type badge */
+.work-meta {
+  @apply flex xl:flex-col gap-2 xl:gap-3 xl:w-[200px] shrink-0 xl:pt-5;
+}
+
+.work-period {
+  @apply text-[13px] xl:text-[14px] text-(--color-body-2) whitespace-nowrap;
+}
+
+/* Type badges */
+.work-type-badge {
+  @apply text-[11px] font-semibold uppercase tracking-widest w-fit px-2.5 py-0.5 rounded-full;
+}
+
+.work-type-badge--full-time {
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.1);
+  border: 1px solid rgba(52, 211, 153, 0.25);
+}
+
+.work-type-badge--contract {
+  color: #60a5fa;
+  background: rgba(96, 165, 250, 0.1);
+  border: 1px solid rgba(96, 165, 250, 0.25);
+}
+
+.work-type-badge--freelance {
+  color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+/* Right column: card */
+.work-card {
+  @apply flex-1 rounded-2xl p-5 xl:p-7 flex flex-col gap-3;
+  background: var(--background-color-2);
+  box-shadow: -18px -6px 40px rgba(255, 255, 255, 0.06),
+  0 20px 50px rgba(2, 6, 23, 0.55), 0 8px 24px rgba(0, 0, 0, 0.45);
+  transition: box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+  transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+  background 0.3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 34px 80px rgba(2, 6, 23, 0.65), 0 12px 36px rgba(0, 0, 0, 0.5);
+}
+
+.work-current-badge {
+  @apply text-[11px] font-semibold uppercase tracking-widest w-fit px-2.5 py-0.5 rounded-full;
+  color: var(--color-primary);
+  background: rgba(255, 1, 79, 0.1);
+  border: 1px solid rgba(255, 1, 79, 0.2);
+}
+
+.work-header {
+  @apply flex flex-wrap items-baseline gap-2;
+}
+
+.work-role {
+  @apply text-[18px] xl:text-xl font-semibold;
+  color: var(--color-heading, #fff);
+}
+
+.work-company {
+  @apply text-[15px] xl:text-[16px] font-medium text-(--color-primary);
+}
+
+.work-location {
+  @apply flex items-center gap-1 text-[13px] text-(--color-body-2);
+}
+
+.work-description {
+  @apply text-[13px] xl:text-[15px] text-(--color-body-2);
+  line-height: 1.7;
+}
+
+.works-tags {
+  @apply flex flex-wrap gap-1.5 mt-1;
+}
+
+/* Light mode */
+html.light .work-card {
+  background: var(--background-color-1);
+  box-shadow: 0 10px 30px rgba(16, 24, 40, 0.1),
+  10px 0 28px rgba(16, 24, 40, 0.06), -10px 0 28px rgba(16, 24, 40, 0.06);
+}
+
+html.light .work-card:hover {
+  box-shadow: 0 18px 40px rgba(16, 24, 40, 0.1), 0 6px 18px rgba(16, 24, 40, 0.07);
+  background: var(--background-color-1-5);
+}
+
+/* ─────────────────────────────────────────────────────────────
+   SHARED CARD SHADOWS (all cards: education, experience, works)
+───────────────────────────────────────────────────────────── */
+
+.single-card,
+.single-card-exp,
+.bento-card,
+.works-card {
+  box-shadow: -18px -6px 40px rgba(255, 255, 255, 0.06),
+  0 20px 50px rgba(2, 6, 23, 0.55), 0 8px 24px rgba(0, 0, 0, 0.45);
+  transition: box-shadow 0.5s cubic-bezier(0.23, 1, 0.32, 1),
+  transform 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+  background 0.3s ease;
+}
+
+.single-card:hover,
+.single-card-exp:hover,
+.bento-card:hover,
+.works-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 34px 80px rgba(2, 6, 23, 0.65), 0 12px 36px rgba(0, 0, 0, 0.5);
+}
+
+/* Tag/span */
 .span {
-  border: 1px solid rgba(255, 1, 79, 0.12); /* subtle primary tint */
+  border: 1px solid rgba(255, 1, 79, 0.12);
   background: var(--background-color-1-5);
   color: var(--color-primary);
   padding: 0.15rem 0.5rem;
@@ -82,25 +273,30 @@
   font-size: 12px;
 }
 
-/* Border bottom color after each wrapper: ensure section wrappers separate visually */
+/* Section separator */
 .wrapper {
   border-bottom: 1px solid var(--color-body-2);
 }
 
-/* Light mode card backgrounds and shadows for education/experience */
+/* ─────────────────────────────────────────────────────────────
+   LIGHT MODE OVERRIDES
+───────────────────────────────────────────────────────────── */
+
 html.light .single-card,
-html.light .single-card,
-html.light .single-card-exp {
-  /* Default in light mode: stronger lateral/directional shadows to visually anchor cards */
+html.light .single-card-exp,
+html.light .bento-card,
+html.light .works-card {
   box-shadow: 0 10px 30px rgba(16, 24, 40, 0.1),
-    10px 0 28px rgba(16, 24, 40, 0.06), -10px 0 28px rgba(16, 24, 40, 0.06);
+  10px 0 28px rgba(16, 24, 40, 0.06), -10px 0 28px rgba(16, 24, 40, 0.06);
   background: var(--background-color-1);
 }
 
 html.light .single-card:hover,
-html.light .single-card-exp:hover {
+html.light .single-card-exp:hover,
+html.light .bento-card:hover,
+html.light .works-card:hover {
   box-shadow: 0 18px 40px rgba(16, 24, 40, 0.1),
-    0 6px 18px rgba(16, 24, 40, 0.07);
+  0 6px 18px rgba(16, 24, 40, 0.07);
   background: var(--background-color-1-5);
 }
 
@@ -108,9 +304,8 @@ html.light .image-wrapper {
   background: transparent;
 }
 
-/* Activities (timeline) — keep branch colors dark in light mode while not changing circle fill */
+/* Activities (timeline) */
 html.light .activities-section .timeline-column {
-  /* Use a dark gray similar to the original tertiary color */
   border-left-color: #0d1013 !important;
 }
 
@@ -118,7 +313,6 @@ html.light .activities-section .branch-line {
   background: #0d1013 !important;
 }
 
-/* Make the circle's border dark in light mode too (keep inside fill unchanged) */
 html.light .activities-section .timeline-circle {
   border-color: #0d1013 !important;
 }

@@ -1,5 +1,6 @@
 import "../styles/Experience_Education.css";
 import expData from "../assets/utils/Experience.json";
+import worksData from "../assets/utils/Works.json";
 import GitHubStats from "../components/GitHubStats";
 
 interface Experience {
@@ -8,75 +9,125 @@ interface Experience {
   bio: string;
 }
 
+interface Work {
+  company: string;
+  role: string;
+  type: string;
+  period: string;
+  location: string;
+  description: string;
+  stack: string[];
+  current?: boolean;
+}
+
 function Experience() {
-  const statsDelay = expData.length * 120 + 200; // stagger after cards
+  const statsDelay = expData.length * 120 + 200;
+
   return (
-    <section id="experience" className="scroll-mt-[150px] xl:scroll-mt-[180px]">
-      <div className="wrapper flex flex-col gap-10">
-        {/* Section Heading */}
-        <div
-          className="xl:mb-5"
-          data-aos="fade-up"
-          data-aos-anchor-placement="center-center"
-          data-aos-duration="500"
-        >
-          <h3 className="bio">What I do?</h3>
-          <h1 className="heading flex justify-center">My Experience</h1>
-        </div>
+      <section id="experience" className="scroll-mt-[150px] xl:scroll-mt-[180px]">
+        <div className="wrapper flex flex-col gap-10">
 
-        {/* Experience Cards Container (cards animate sequentially) */}
-        <div
-          className="card-container"
-          data-aos-anchor-placement="center-center"
-        >
-          {/* Single Container */}
-          {expData.map((exp: Experience, index: number) => (
-            <div
-              key={index}
-              className="single-card-exp box-shadow"
+          {/* ─── Section Heading ─── */}
+          <div
+              className="xl:mb-5"
               data-aos="fade-up"
+              data-aos-anchor-placement="center-center"
               data-aos-duration="500"
-              data-aos-delay={String(index * 120)}
-            >
-              <div className="content-wrapper">
-                <div className="info-wrapper-exp">
-                  <i
-                    className={`${exp.icon} text-(--color-primary) text-6xl`}
-                  ></i>
+          >
+            <h3 className="bio">What I do?</h3>
+            <h1 className="heading flex justify-center">My Experience</h1>
+          </div>
 
-                  <h3 className="h3-exp">{exp.title}</h3>
-
-                  <div>
-                    <p className="text-[14px] xl:text-[18px] text-(--color-body-2) text-justify xl:mt-2">
+          {/* ─── Bento Grid: Experience Cards ─── */}
+          <div className="bento-grid">
+            {expData.map((exp: Experience, index: number) => (
+                <div
+                    key={index}
+                    className="bento-card single-card-exp"
+                    data-aos="fade-up"
+                    data-aos-duration="500"
+                    data-aos-delay={String(index * 120)}
+                >
+                  <div className="bento-card-inner info-wrapper-exp">
+                    <i className={`${exp.icon} text-(--color-primary) text-5xl xl:text-6xl`} />
+                    <h3 className="h3-exp mt-3">{exp.title}</h3>
+                    <p className="text-[14px] xl:text-[17px] text-(--color-body-2) text-justify xl:mt-2">
                       {exp.bio}
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
-          ))}
-          {/* Single Container End */}
-        </div>
-        {/* GitHub Metrics - placed below the cards as requested */}
-        <div className="xl:mt-6">
-          <div
-            data-aos="fade-right"
-            data-aos-duration="500"
-            data-aos-delay={String(statsDelay)}
-            className="flex justify-center mb-4"
-          >
-            <h3 className="text-2xl font-medium text-(--color-primary)">GitHub Stats</h3>
+            ))}
           </div>
+
+          {/* ─── GitHub Stats — standalone grid ─── */}
           <div
-            data-aos="fade-up"
-            data-aos-duration="600"
-            data-aos-delay={String(statsDelay)}
+              className="github-stats-section"
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-delay={String(statsDelay)}
           >
+            <h3 className="text-xl xl:text-2xl font-medium text-(--color-primary) mb-4">
+              GitHub Stats
+            </h3>
             <GitHubStats />
           </div>
+
+          {/* ─── Work History Section ─── */}
+          <div
+              className="xl:mt-4"
+              data-aos="fade-up"
+              data-aos-duration="500"
+              data-aos-delay="100"
+          >
+            <div className="xl:mb-5" data-aos="fade-up" data-aos-duration="500">
+              <h3 className="bio">Where I've worked?</h3>
+              <h1 className="heading flex justify-center">My Work</h1>
+            </div>
+
+            <div className="works-list">
+              {worksData.map((work: Work, index: number) => (
+                  <div
+                      key={index}
+                      className="work-item"
+                      data-aos="fade-up"
+                      data-aos-duration="500"
+                      data-aos-delay={String(index * 100)}
+                  >
+                    {/* Left: period + type */}
+                    <div className="work-meta">
+                      <span className="work-period">{work.period}</span>
+                      <span className={`work-type-badge work-type-badge--${work.type.toLowerCase().replace(/\s/g, "-")}`}>
+                    {work.type}
+                  </span>
+                    </div>
+
+                    {/* Right: card body */}
+                    <div className="work-card">
+                      {work.current && (
+                          <span className="work-current-badge">Current</span>
+                      )}
+                      <div className="work-header">
+                        <h3 className="work-role">{work.role}</h3>
+                        <span className="work-company">@ {work.company}</span>
+                      </div>
+                      <div className="work-location">
+                        <i className="bx bx-map-pin text-sm" />
+                        <span>{work.location}</span>
+                      </div>
+                      <p className="work-description">{work.description}</p>
+                      <div className="works-tags">
+                        {work.stack.map((tech: string, i: number) => (
+                            <span key={i} className="span">{tech}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+              ))}
+            </div>
+          </div>
+
         </div>
-      </div>
-    </section>
+      </section>
   );
 }
 
