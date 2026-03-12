@@ -220,7 +220,7 @@ html.light .github-stat:hover {
 
 .work-role {
   @apply text-[18px] xl:text-xl font-semibold;
-  color: var(--color-heading, #fff);
+  color: var(--color-body, #fff);
 }
 
 .work-company {
