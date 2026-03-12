@@ -9,14 +9,6 @@ type GhUser = {
   html_url: string;
 };
 
-type Repo = {
-  name: string;
-  stargazers_count: number;
-  forks_count: number;
-  language: string | null;
-  html_url: string;
-};
-
 function formatNumber(n: number) {
   return n >= 1000 ? `${(n / 1000).toFixed(1)}k` : String(n);
 }
@@ -26,7 +18,6 @@ export default function GitHubStats() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [user, setUser] = useState<GhUser | null>(null);
-  const [repos, setRepos] = useState<Repo[]>([]);
   const [commitCount, setCommitCount] = useState<number | null>(null);
 
   useEffect(() => {
@@ -46,12 +37,11 @@ export default function GitHubStats() {
         if (!reposRes.ok) throw new Error("Failed to load GitHub repos");
 
         const userJson = await userRes.json();
-        const reposJson: Repo[] = await reposRes.json();
+        const reposJson: { name: string }[] = await reposRes.json();
 
         if (!mounted) return;
 
         setUser(userJson as GhUser);
-        setRepos(reposJson as Repo[]);
 
         const token = (import.meta as any)?.env?.VITE_GITHUB_TOKEN || null;
 
