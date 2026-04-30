@@ -7,14 +7,12 @@
     "period": "March 2026 — April 2026",
     "location": "Remote",
     "description": [
-      "Contributed to a cross-platform mobile application for iOS and Android using React Native and Supabase",
-      "Collaborated with the team to clean up and restructure an AI-generated codebase, improving readability, maintainability, and overall code quality",
-      "Integrated AI-driven features using Anthropic APIs",
-      "Implemented major frontend UI revisions to improve usability and user experience",
-      "Optimized search functionality, improving performance and responsiveness for ~1,000 users",
-      "Worked closely with frontend and backend teammates to ensure smooth feature integration"
+      "Contributed to a cross-platform mobile application for <b><u>iOS</u></b> and <b><u>Android</u></b> using <b><u>React Native</u></b> and <b><u>Supabase</u></b>",
+      "Collaborated with the team to clean up and <b><u>restructure an AI-generated codebase</u></b>, improving readability, maintainability, and overall code quality",
+      "Integrated AI-driven features using <b><u>Anthropic APIs</u></b>",
+      "<b><u>Optimized search functionality</u></b>, improving performance and responsiveness for <b><u>~1000+ users</u></b>"
     ],
-    "stack": ["React", "Node.js", "JavaScript", "TypeScript", "Supabase", "Github"],
+    "stack": ["React", "Node.js", "TypeScript", "Supabase", "Github"],
     "current": false
   }
 ]

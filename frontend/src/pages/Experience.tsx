@@ -129,7 +129,10 @@ function Experience() {
                       {Array.isArray(work.description) ? (
                         <ul className="work-description list-disc pl-5 space-y-1">
                           {work.description.map((item, i) => (
-                            <li key={i}>{item}</li>
+                            <li
+                              key={i}
+                              dangerouslySetInnerHTML={{ __html: item }}
+                            />
                           ))}
                         </ul>
                       ) : (
