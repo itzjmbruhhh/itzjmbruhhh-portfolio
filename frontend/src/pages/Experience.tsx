@@ -2,6 +2,7 @@ import "../styles/Experience_Education.css";
 import expData from "../assets/utils/Experience.json";
 import worksData from "../assets/utils/Works.json";
 import GitHubStats from "../components/GitHubStats";
+import { useState } from "react";
 
 interface Experience {
   icon: string;
@@ -23,6 +24,11 @@ interface Work {
 
 function Experience() {
   const statsDelay = expData.length * 120 + 200;
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
+
+  const toggleExpand = (index: number) => {
+    setExpandedIndex(prev => (prev === index ? null : index));
+  };
 
   return (
       <section id="experience" className="scroll-mt-[150px] xl:scroll-mt-[180px]">
@@ -90,6 +96,8 @@ function Experience() {
                   <div
                       key={index}
                       className="work-item"
+                      onClick={() => toggleExpand(index)}
+                      style={{ cursor: "pointer" }}
                       data-aos="fade-up"
                       data-aos-duration="500"
                       data-aos-delay={String(index * 100)}
@@ -126,7 +134,11 @@ function Experience() {
                         <i className="bx bx-map-pin text-sm" />
                         <span>{work.location}</span>
                       </div>
+                      <span className="text-sm opacity-70">
+                        {expandedIndex === index ? "▲ Hide details" : "▼ Show details"}
+                      </span>
                       {Array.isArray(work.description) ? (
+                      expandedIndex === index && (
                         <ul className="work-description list-disc pl-5 space-y-1">
                           {work.description.map((item, i) => (
                             <li
@@ -135,6 +147,7 @@ function Experience() {
                             />
                           ))}
                         </ul>
+                      )
                       ) : (
                         <p className="work-description">{work.description}</p>
                       )}
