@@ -86,7 +86,7 @@ function Experience() {
             </div>
 
             <div className="works-list">
-              {worksData.map((work: Work, index: number) => (
+              {[...worksData].reverse().map((work: Work, index: number) => (
                   <div
                       key={index}
                       className="work-item"
