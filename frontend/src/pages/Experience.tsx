@@ -15,7 +15,7 @@ interface Work {
   type: string;
   period: string;
   location: string;
-  description: string;
+  description: string | string[];
   stack: string[];
   current?: boolean;
   link?: string;
@@ -126,7 +126,15 @@ function Experience() {
                         <i className="bx bx-map-pin text-sm" />
                         <span>{work.location}</span>
                       </div>
-                      <p className="work-description">{work.description}</p>
+                      {Array.isArray(work.description) ? (
+                        <ul className="work-description list-disc pl-5 space-y-1">
+                          {work.description.map((item, i) => (
+                            <li key={i}>{item}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p className="work-description">{work.description}</p>
+                      )}
                       <div className="works-tags">
                         {work.stack.map((tech: string, i: number) => (
                             <span key={i} className="span">{tech}</span>
