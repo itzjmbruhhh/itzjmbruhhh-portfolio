@@ -2,12 +2,19 @@
   {
     "company": "JLabs",
     "link" : "https://www.linkedin.com/company/jlabs-team/",
-    "role": "Full Stack Intern",
+    "role": "Full Stack Developer Intern",
     "type": "Internship",
-    "period": "March 2026 — Present",
+    "period": "March 2026 — April 2026",
     "location": "Remote",
-    "description": "Building and maintaining scalable web applications using React and TypeScript. Collaborated closely with design and backend teams to ship new product features.",
-    "stack": ["React", "Node.js", "JavaScript"],
-    "current": true
+    "description": [
+      "Contributed to a cross-platform mobile application for iOS and Android using React Native and Supabase",
+      "Collaborated with the team to clean up and restructure an AI-generated codebase, improving readability, maintainability, and overall code quality",
+      "Integrated AI-driven features using Anthropic APIs",
+      "Implemented major frontend UI revisions to improve usability and user experience",
+      "Optimized search functionality, improving performance and responsiveness for ~1,000 users",
+      "Worked closely with frontend and backend teammates to ensure smooth feature integration"
+    ],
+    "stack": ["React", "Node.js", "JavaScript", "TypeScript", "Supabase", "Github"],
+    "current": false
   }
 ]
