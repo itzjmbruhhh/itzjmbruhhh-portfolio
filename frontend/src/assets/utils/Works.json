@@ -20,12 +20,15 @@
     "link": "https://www.facebook.com/ched4/",
     "role": "Full Stack Developer Intern",
     "type": "Internship",
-    "period": "May 2026 — Present",
+    "period": "May 2026 — June 2026",
     "location": "Onsite",
     "description": [
-      "Create a system"
+      "Developed a web-based <u><b>Graduate Tracer System</u></b> designed for Higher Education Institutions (HEIs) <u><b>across the CALABARZON region</u></b>, with potential for future nationwide implementation.",
+      "Built the system from scratch using <u><b>PHP Laravel</u></b> for the backend and <u><b>React TypeScript</u></b> for the frontend",
+      "Designed and structured the <u><b>system architecture, database schema,</u></b> and <u><b>ERD</u></b> based on the program flow, operational requirements, and recommendations provided by supervisors.",
+      "In collaboration with supervisors, I implemented core web application features, interfaces, and workflows to support graduate tracking, institutional data management, and reporting processes."
     ],
-    "stack": ["PHP", "Laravel", "Github"],
-    "current": true
+    "stack": ["TypeScript", "PHP", "React", "Laravel", "Github"],
+    "current": false
   }
 ]
