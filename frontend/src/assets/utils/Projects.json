@@ -22,7 +22,8 @@
     "tags": ["All", "Web"],
     "techStack": ["Flask", "React", "Tensorflow", "GCP"],
     "url": "https://github.com/itzjmbruhhh/NPKnows_frontend",
-    "liveUrl": "https://npknows.vercel.app"
+    "liveUrl": "https://npknows.vercel.app",
+    "publication" : "https://ieeexplore.ieee.org/document/11533893/"
   },
   {
     "title": "Leaf It Up to Me",

@@ -8,6 +8,7 @@ interface Project {
   url?: string;
   liveUrl?: string;
   VideoDemo?: string;
+  publication?: string;
   techStack?: string[]; // <-- make optional
 }
 
@@ -118,7 +119,10 @@ const ProjectOverlay: React.FC<ProjectOverlayProps> = ({
           )}
 
           {/* Action Buttons */}
-          {(project.url || project.liveUrl) && (
+          {(project.url ||
+            project.liveUrl ||
+            project.VideoDemo ||
+            project.publication) && (
             <div className="mt-[8%] flex flex-wrap gap-3">
               {project.url && (
                 <a
@@ -148,6 +152,16 @@ const ProjectOverlay: React.FC<ProjectOverlayProps> = ({
                   className="box-shadow hover cv-button font-medium"
                 >
                   Video Demo
+                </a>
+              )}
+              {project.publication && (
+                <a
+                  href={project.publication}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="box-shadow hover cv-button font-medium"
+                >
+                  View Publication
                 </a>
               )}
             </div>

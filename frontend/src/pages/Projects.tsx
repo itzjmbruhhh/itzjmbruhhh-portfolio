@@ -10,6 +10,9 @@ interface Project {
   tags: string[];
   image?: string;
   url?: string;
+  liveUrl?: string;
+  VideoDemo?: string;
+  publication?: string;
   techStack?: string[]; // <-- make optional
 }
 

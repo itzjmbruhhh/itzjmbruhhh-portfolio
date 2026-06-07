@@ -13,6 +13,8 @@ interface Project {
   image?: string;
   url?: string;
   liveUrl?: string;
+  VideoDemo?: string;
+  publication?: string;
   techStack?: string[];
 }
 
