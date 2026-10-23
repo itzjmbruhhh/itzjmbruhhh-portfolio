@@ -30,5 +30,19 @@
     ],
     "stack": ["TypeScript", "PHP", "React", "Laravel", "Github"],
     "current": false
+  },
+  {
+    "company": "Commission on Higher Education (CHED) Regional Office IV",
+    "link": "https://www.facebook.com/ched4/",
+    "role": "Project Technical Staff - I (Data Analyst)",
+    "type": "Full-Time",
+    "period": "September 2026 — Present",
+    "location": "Onsite",
+    "description": [
+      "Verify candidates for SIKAP scholars",
+      "SGS-L Handling"
+    ],
+    "stack": ["Sheets", "Google Scripts"],
+    "current": true
   }
 ]
